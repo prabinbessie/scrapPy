@@ -290,6 +290,29 @@ def extract_issue_dates(text: str) -> tuple[str | None, str | None]:
         end_bs = _parse_bs_date(same_month_range.group(2), month_token, year_token)
         return start_bs, end_bs
 
+    cross_month_range = re.search(
+        rf"{open_prefix}\s+"
+        r"(\d{1,2}(?:st|nd|rd|th)?)\s+([A-Za-z]+)\s*[-–]\s*"
+        r"(\d{1,2}(?:st|nd|rd|th)?)\s+([A-Za-z]+),?\s*(\d{4})",
+        cleaned,
+        flags=re.IGNORECASE,
+    )
+    if cross_month_range:
+        start_day = cross_month_range.group(1)
+        start_month = cross_month_range.group(2)
+        end_day = cross_month_range.group(3)
+        end_month = cross_month_range.group(4)
+        year_token = cross_month_range.group(5)
+
+        start_ad = _safe_parse_ad_date(f"{start_day} {start_month} {year_token}")
+        end_ad = _safe_parse_ad_date(f"{end_day} {end_month} {year_token}")
+        if start_ad or end_ad:
+            return start_ad, end_ad
+
+        start_bs = _parse_bs_date(start_day, start_month, year_token)
+        end_bs = _parse_bs_date(end_day, end_month, year_token)
+        return start_bs, end_bs
+
     date_expr = r"(?:\d{4}[-/]\d{1,2}[-/]\d{1,2}" r"|\d{1,2}(?:st|nd|rd|th)?\s+[A-Za-z]+,?\s*\d{4})"
 
     range_match = re.search(

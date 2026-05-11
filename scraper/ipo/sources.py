@@ -441,7 +441,7 @@ def fetch_all_ipo_source_records(
     disclosure_records = fetched["disclosure_records"]
 
     return {
-        "upcoming_sources": nepselink_records + upcoming_records,
+        "upcoming_sources": upcoming_records + nepselink_records,
         "merolagani_upcoming_sources": upcoming_records,
         "result_sources": result_records,
         "nepse_disclosure_sources": disclosure_records,
