@@ -1,17 +1,17 @@
 {
   "meta": {
-    "generated_at_utc": "2026-05-10T18:48:53+00:00",
+    "generated_at_utc": "2026-05-11T02:14:25+00:00",
     "sources": {
       "merolagani_upcoming": 2,
       "nepselink_ipo_opening": 10,
-      "merolagani_results": 4,
+      "merolagani_results": 2,
       "nepse_disclosures": 0
     },
     "stale_sources": [],
-    "upcoming_count": 2,
+    "upcoming_count": 1,
     "open_count": 1,
-    "closed_count": 8,
-    "result_count": 4,
+    "closed_count": 9,
+    "result_count": 2,
     "unknown_count": 0
   },
   "upcoming": [
@@ -35,29 +35,8 @@
       "announcement_date": "May 05, 2026",
       "source": "merolagani_upcoming",
       "url": "https://merolagani.com/AnnouncementDetail.aspx?id=65481",
-      "scraped_at_utc": "2026-05-10T18:48:53+00:00",
+      "scraped_at_utc": "2026-05-11T02:14:25+00:00",
       "raw_text": "Kalanga Hydro Limited is going to issue its 28,70,000.00 units of IPO shares to the general public starting from 8th - 13th Jestha, 2083 Kalanga Hydro Limited is going to issue its 28,70,000.00 units of IPO shares to the general public starting from 8th - 13th Jestha, 2083"
-    },
-    {
-      "record_type": "issue",
-      "nature": "issue",
-      "issue_status": "upcoming",
-      "issue_type": "ipo-general",
-      "company_name": "Snow Rivers Limited",
-      "title": "Snow Rivers Limited IPO-General",
-      "details": "IPO-General Snow Rivers Limited units 778125 price per unit 100 minimum apply 10 open 2083-01-29 close 2083-01-02 status Coming Soon",
-      "reserved_for": [],
-      "issue_open_date": "2083-01-29",
-      "issue_close_date": "2083-01-02",
-      "min_quantity": 10.0,
-      "max_quantity": null,
-      "total_quantity": 778125.0,
-      "price_per_unit": 100.0,
-      "announcement_date": "2083-01-29",
-      "source": "nepselink_ipo_opening",
-      "url": "https://nepselink.com/ipo-opening",
-      "scraped_at_utc": "2026-05-10T18:48:53+00:00",
-      "raw_text": "Snow Rivers Limited IPO-General IPO-General Snow Rivers Limited units 778125 price per unit 100 minimum apply 10 open 2083-01-29 close 2083-01-02 status Coming Soon"
     }
   ],
   "open": [
@@ -79,11 +58,32 @@
       "announcement_date": "2083-01-23",
       "source": "nepselink_ipo_opening",
       "url": "https://nepselink.com/ipo-opening",
-      "scraped_at_utc": "2026-05-10T18:48:53+00:00",
+      "scraped_at_utc": "2026-05-11T02:14:25+00:00",
       "raw_text": "Taksar Pikhuwa Khola Hydropower Limited IPO-General IPO-General Taksar Pikhuwa Khola Hydropower Limited units 2515455 price per unit 100 minimum apply 10 open 2083-01-23 close 2083-01-28 status Open"
     }
   ],
   "closed": [
+    {
+      "record_type": "issue",
+      "nature": "issue",
+      "issue_status": "closed",
+      "issue_type": "ipo-general",
+      "company_name": "Snow Rivers Limited",
+      "title": "Snow Rivers Limited IPO-General",
+      "details": "IPO-General Snow Rivers Limited units 778125 price per unit 100 minimum apply 10 open 2083-01-29 close 2083-01-02 status Coming Soon",
+      "reserved_for": [],
+      "issue_open_date": "2083-01-29",
+      "issue_close_date": "2083-01-02",
+      "min_quantity": 10.0,
+      "max_quantity": null,
+      "total_quantity": 778125.0,
+      "price_per_unit": 100.0,
+      "announcement_date": "2083-01-29",
+      "source": "nepselink_ipo_opening",
+      "url": "https://nepselink.com/ipo-opening",
+      "scraped_at_utc": "2026-05-11T02:14:25+00:00",
+      "raw_text": "Snow Rivers Limited IPO-General IPO-General Snow Rivers Limited units 778125 price per unit 100 minimum apply 10 open 2083-01-29 close 2083-01-02 status Coming Soon"
+    },
     {
       "record_type": "issue",
       "nature": "issue",
@@ -102,7 +102,7 @@
       "announcement_date": "2083-01-22",
       "source": "nepselink_ipo_opening",
       "url": "https://nepselink.com/ipo-opening",
-      "scraped_at_utc": "2026-05-10T18:48:53+00:00",
+      "scraped_at_utc": "2026-05-11T02:14:25+00:00",
       "raw_text": "Yambaling Hydropower Limited IPO-General IPO-General Yambaling Hydropower Limited units 1743000 price per unit 100 minimum apply 10 open 2083-01-16 close 2083-01-22 status Closed"
     },
     {
@@ -123,7 +123,7 @@
       "announcement_date": "2083-01-08",
       "source": "nepselink_ipo_opening",
       "url": "https://nepselink.com/ipo-opening",
-      "scraped_at_utc": "2026-05-10T18:48:53+00:00",
+      "scraped_at_utc": "2026-05-11T02:14:25+00:00",
       "raw_text": "Sopan Pharmaceuticals Limited IPO-General IPO-General Sopan Pharmaceuticals Limited units 3474900 price per unit 100 minimum apply 10 open 2083-01-03 close 2083-01-08 status Closed"
     },
     {
@@ -144,7 +144,7 @@
       "announcement_date": "2083-01-02",
       "source": "nepselink_ipo_opening",
       "url": "https://nepselink.com/ipo-opening",
-      "scraped_at_utc": "2026-05-10T18:48:53+00:00",
+      "scraped_at_utc": "2026-05-11T02:14:25+00:00",
       "raw_text": "Appolo Hydropower Limited IPO-GENERAL IPO-GENERAL Appolo Hydropower Limited units 780200 price per unit 100 minimum apply 10 open 2082-12-26 close 2083-01-02 status Closed"
     },
     {
@@ -165,7 +165,7 @@
       "announcement_date": "2082-12-25",
       "source": "nepselink_ipo_opening",
       "url": "https://nepselink.com/ipo-opening",
-      "scraped_at_utc": "2026-05-10T18:48:53+00:00",
+      "scraped_at_utc": "2026-05-11T02:14:25+00:00",
       "raw_text": "Kalinchowk Hydropower Limited IPO-General IPO-General Kalinchowk Hydropower Limited units 684750 price per unit 100 minimum apply 10 open 2082-12-22 close 2082-12-25 status Closed"
     },
     {
@@ -186,7 +186,7 @@
       "announcement_date": "2082-11-22",
       "source": "nepselink_ipo_opening",
       "url": "https://nepselink.com/ipo-opening",
-      "scraped_at_utc": "2026-05-10T18:48:53+00:00",
+      "scraped_at_utc": "2026-05-11T02:14:25+00:00",
       "raw_text": "Shikhar Power Development Limited IPO-GENERAL IPO-GENERAL Shikhar Power Development Limited units 1842600 price per unit 100 minimum apply 10 open 2082-11-17 close 2082-11-22 status Closed"
     },
     {
@@ -207,7 +207,7 @@
       "announcement_date": "2082-11-15",
       "source": "nepselink_ipo_opening",
       "url": "https://nepselink.com/ipo-opening",
-      "scraped_at_utc": "2026-05-10T18:48:53+00:00",
+      "scraped_at_utc": "2026-05-11T02:14:25+00:00",
       "raw_text": "Palpa Cement Limited IPO-General IPO-General Palpa Cement Limited units 4500000 price per unit 100 minimum apply 10 open 2082-11-12 close 2082-11-15 status Closed"
     },
     {
@@ -228,7 +228,7 @@
       "announcement_date": "2082-11-10",
       "source": "nepselink_ipo_opening",
       "url": "https://nepselink.com/ipo-opening",
-      "scraped_at_utc": "2026-05-10T18:48:53+00:00",
+      "scraped_at_utc": "2026-05-11T02:14:25+00:00",
       "raw_text": "Super Khudi Hydropower Limited IPO-General IPO-General Super Khudi Hydropower Limited units 1286500 price per unit 100 minimum apply 10 open 2082-11-05 close 2082-11-10 status Closed"
     },
     {
@@ -249,7 +249,7 @@
       "announcement_date": "2082-11-04",
       "source": "nepselink_ipo_opening",
       "url": "https://nepselink.com/ipo-opening",
-      "scraped_at_utc": "2026-05-10T18:48:53+00:00",
+      "scraped_at_utc": "2026-05-11T02:14:25+00:00",
       "raw_text": "Ridge Line Energy Limited IPO-GENERAL IPO-GENERAL Ridge Line Energy Limited units 1180260 price per unit 100 minimum apply 10 open 2082-10-28 close 2082-11-04 status Closed"
     }
   ],
@@ -274,7 +274,7 @@
       "announcement_date": "May 09, 2026",
       "source": "merolagani_announcements",
       "url": "https://merolagani.com/AnnouncementDetail.aspx?id=65540",
-      "scraped_at_utc": "2026-05-10T18:48:53+00:00",
+      "scraped_at_utc": "2026-05-11T02:14:25+00:00",
       "raw_text": "Sanigad Hydro Limited has distributed its 28,50,000.00 units of IPO shares to the project affected local residents of Far Western Province, Bajhang District, Bungal Municipality, Ward No. 04 (Former Khiratadi VDC Ward No. 08), Ward No. 02 (Former Dahabgar VDC Ward No. 06)/Ward No. 01 (Former Dahabgar VDC Ward No. 02) and Ward No. 03, 05 -11 on Baishakh 24, 2083 and the refund process for non-allottee's begins from Baishakh 29, 2083 Sanigad Hydro Limited has distributed its 28,50,000.00 units of IPO shares to the project affected local residents of Far Western Province, Bajhang District, Bungal Municipality, Ward No. 04 (Former Khiratadi VDC Ward No. 08), Ward No. 02 (Former Dahabgar VDC Ward No. 06)/Ward No. 01 (Former Dahabgar VDC Ward No. 02) and Ward No. 03, 05 -11 on Baishakh 24, 2083 and the refund process for non-allottee's begins from Baishakh 29, 2083"
     },
     {
@@ -297,52 +297,8 @@
       "announcement_date": "May 09, 2026",
       "source": "merolagani_announcements",
       "url": "https://merolagani.com/AnnouncementDetail.aspx?id=65539",
-      "scraped_at_utc": "2026-05-10T18:48:53+00:00",
+      "scraped_at_utc": "2026-05-11T02:14:25+00:00",
       "raw_text": "Sanigad Hydro Limited has distributed its 5,70,000.00 units of IPO shares to the Nepalese citizens working abroad on Chaitra 22, 2082 Sanigad Hydro Limited has distributed its 5,70,000.00 units of IPO shares to the Nepalese citizens working abroad on Chaitra 22, 2082"
-    },
-    {
-      "record_type": "result",
-      "nature": "result",
-      "issue_status": "result",
-      "issue_type": "ipo",
-      "company_name": "Beni Hydropower Project Limited",
-      "title": "Beni Hydropower Project Limited has distributed its 10,40,000.00 units of IPO shares to the local residents, project affected and non-affected areas of Solukhumbu District, Solu Dudhkunda Municipality Ward No. 02, 03 & 04, 05, 06, 07 & 11 and rest of all other areas on Baishakh 24, 2083 and the refund process for non-allottee's begins from Baishakh 29, 2083",
-      "details": "Beni Hydropower Project Limited has distributed its 10,40,000.00 units of IPO shares to the local residents, project affected and non-affected areas of Solukhumbu District, Solu Dudhkunda Municipality Ward No. 02, 03 & 04, 05, 06, 07 & 11 and rest of all other areas on Baishakh 24, 2083 and the refund process for non-allottee's begins from Baishakh 29, 2083",
-      "reserved_for": [
-        "local_residents"
-      ],
-      "issue_open_date": null,
-      "issue_close_date": null,
-      "min_quantity": null,
-      "max_quantity": null,
-      "total_quantity": 1040000.0,
-      "price_per_unit": null,
-      "announcement_date": "May 08, 2026",
-      "source": "merolagani_announcements",
-      "url": "https://merolagani.com/AnnouncementDetail.aspx?id=65514",
-      "scraped_at_utc": "2026-05-10T18:48:53+00:00",
-      "raw_text": "Beni Hydropower Project Limited has distributed its 10,40,000.00 units of IPO shares to the local residents, project affected and non-affected areas of Solukhumbu District, Solu Dudhkunda Municipality Ward No. 02, 03 & 04, 05, 06, 07 & 11 and rest of all other areas on Baishakh 24, 2083 and the refund process for non-allottee's begins from Baishakh 29, 2083 Beni Hydropower Project Limited has distributed its 10,40,000.00 units of IPO shares to the local residents, project affected and non-affected areas of Solukhumbu District, Solu Dudhkunda Municipality Ward No. 02, 03 & 04, 05, 06, 07 & 11 and rest of all other areas on Baishakh 24, 2083 and the refund process for non-allottee's begins from Baishakh 29, 2083"
-    },
-    {
-      "record_type": "result",
-      "nature": "result",
-      "issue_status": "result",
-      "issue_type": "right_share",
-      "company_name": "Sumeru Polymers Limited",
-      "title": "Sumeru Polymers Limited has distributed its 7,000.00 units unsold promoter right shares to the interested existing promoter shareholders on Baishakh 24, 2083 and the refund process for non-allottee's begins from today, Baishakh 25, 2083",
-      "details": "Sumeru Polymers Limited has distributed its 7,000.00 units unsold promoter right shares to the interested existing promoter shareholders on Baishakh 24, 2083 and the refund process for non-allottee's begins from today, Baishakh 25, 2083",
-      "reserved_for": [],
-      "issue_open_date": null,
-      "issue_close_date": null,
-      "min_quantity": null,
-      "max_quantity": null,
-      "total_quantity": 7000.0,
-      "price_per_unit": null,
-      "announcement_date": "May 08, 2026",
-      "source": "merolagani_announcements",
-      "url": "https://merolagani.com/AnnouncementDetail.aspx?id=65509",
-      "scraped_at_utc": "2026-05-10T18:48:53+00:00",
-      "raw_text": "Sumeru Polymers Limited has distributed its 7,000.00 units unsold promoter right shares to the interested existing promoter shareholders on Baishakh 24, 2083 and the refund process for non-allottee's begins from today, Baishakh 25, 2083 Sumeru Polymers Limited has distributed its 7,000.00 units unsold promoter right shares to the interested existing promoter shareholders on Baishakh 24, 2083 and the refund process for non-allottee's begins from today, Baishakh 25, 2083"
     }
   ],
   "unknown": []
