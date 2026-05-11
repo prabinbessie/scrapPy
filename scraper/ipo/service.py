@@ -7,7 +7,11 @@ from typing import Any
 
 from scraper.config import IPO_FEED_JSON
 from scraper.io import write_json
-from scraper.ipo.classifier import classify_ipo_entry, derive_issue_status
+from scraper.ipo.classifier import (
+    _to_date,
+    classify_ipo_entry,
+    derive_issue_status,
+)
 from scraper.ipo.common import normalize_issue_status
 from scraper.ipo.sources import fetch_all_ipo_source_records
 
@@ -44,33 +48,109 @@ def _normalize_quantity_token(value: Any) -> str:
     return normalized
 
 
-def _record_key(item: dict[str, Any]) -> str:
+_MERGEABLE_NUMERIC_FIELDS: tuple[str, ...] = (
+    "min_quantity",
+    "max_quantity",
+    "total_quantity",
+    "price_per_unit",
+)
+
+
+def _canonical_issue_type(value: Any) -> str:
+    raw = str(value or "").strip().lower()
+    if not raw:
+        return ""
+    if "debenture" in raw:
+        return "debenture"
+    if "right" in raw:
+        return "right_share"
+    if "further public" in raw or raw == "fpo" or raw.startswith("fpo-"):
+        return "fpo"
+    if "mutual" in raw:
+        return "mutual_fund"
+    if "ipo" in raw or "ordinary" in raw:
+        return "ipo"
+    return raw
+
+
+def _candidate_keys(item: dict[str, Any]) -> list[str]:
     company = str(item.get("company_name") or "").strip().lower()
+    issue_type = _canonical_issue_type(item.get("issue_type"))
+    quantity = _normalize_quantity_token(item.get("total_quantity"))
     open_date = str(item.get("issue_open_date") or "").strip()
     close_date = str(item.get("issue_close_date") or "").strip()
-    quantity = _normalize_quantity_token(item.get("total_quantity"))
 
-    if company and quantity:
-        return f"biz-qty::{company}::{quantity}"
+    keys: list[str] = []
+    if company and issue_type:
+        if quantity:
+            keys.append(f"qty::{company}::{issue_type}::{quantity}")
+        if open_date:
+            keys.append(f"open::{company}::{issue_type}::{open_date}")
+        if close_date:
+            keys.append(f"close::{company}::{issue_type}::{close_date}")
 
-    if company and (open_date or close_date):
-        return f"biz-date::{company}::{open_date}::{close_date}"
+    if not keys:
+        keys.append(
+            f"raw::{item.get('source', '')}::{item.get('url', '')}::{item.get('title', '')}"
+        )
+    return keys
 
-    return f"raw::{item.get('source','')}::{item.get('url','')}::{item.get('title','')}"
+
+def _merge_record(primary: dict[str, Any], secondary: dict[str, Any]) -> None:
+    dates_changed = False
+
+    for field in _MERGEABLE_NUMERIC_FIELDS:
+        if primary.get(field) is None and secondary.get(field) is not None:
+            primary[field] = secondary[field]
+
+    if primary.get("issue_open_date") is None and secondary.get("issue_open_date"):
+        primary["issue_open_date"] = secondary["issue_open_date"]
+        dates_changed = True
+
+    if primary.get("issue_close_date") is None and secondary.get("issue_close_date"):
+        sec_close = secondary["issue_close_date"]
+        pri_open = primary.get("issue_open_date")
+        accept = True
+        if pri_open:
+            pri_open_ad = _to_date(pri_open)
+            sec_close_ad = _to_date(sec_close)
+            if pri_open_ad and sec_close_ad and sec_close_ad < pri_open_ad:
+                accept = False
+        if accept:
+            primary["issue_close_date"] = sec_close
+            dates_changed = True
+
+    if dates_changed and primary.get("nature") != "result":
+        primary["issue_status"] = derive_issue_status(
+            primary.get("issue_open_date"),
+            primary.get("issue_close_date"),
+            primary.get("nature", "issue"),
+            primary.get("raw_text", ""),
+        )
 
 
 def _deduplicate(items: list[dict[str, Any]]) -> list[dict[str, Any]]:
-    seen: set[str] = set()
-    result: list[dict[str, Any]] = []
+    primary_by_key: dict[str, dict[str, Any]] = {}
+    primaries: list[dict[str, Any]] = []
 
     for item in items:
-        key = _record_key(item)
-        if key in seen:
-            continue
-        seen.add(key)
-        result.append(item)
+        keys = _candidate_keys(item)
+        existing: dict[str, Any] | None = None
+        for key in keys:
+            if key in primary_by_key:
+                existing = primary_by_key[key]
+                break
 
-    return result
+        if existing is None:
+            primaries.append(item)
+            for key in keys:
+                primary_by_key.setdefault(key, item)
+        else:
+            _merge_record(existing, item)
+            for key in keys:
+                primary_by_key.setdefault(key, existing)
+
+    return primaries
 
 
 def _group_by_status(records: list[dict[str, Any]]) -> dict[str, list[dict[str, Any]]]:
