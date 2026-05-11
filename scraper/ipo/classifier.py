@@ -8,10 +8,12 @@ from dateutil import parser as date_parser
 
 from scraper.ipo.common import normalize_issue_status
 
+NEPAL_TZ = timezone(timedelta(hours=5, minutes=45))
+
 _BS_YEAR_START: dict[int, date] = {
     2082: date(2025, 4, 14),
-    2083: date(2026, 4, 13),
-    2084: date(2027, 4, 13),
+    2083: date(2026, 4, 14),
+    2084: date(2027, 4, 14),
 }
 
 _BS_MONTH_DAYS: dict[int, list[int]] = {
@@ -323,7 +325,7 @@ def derive_issue_status(
     if nature == "result":
         return "result"
 
-    today = datetime.now(timezone.utc).date()
+    today = datetime.now(NEPAL_TZ).date()
     start = _to_date(open_date)
     end = _to_date(close_date)
     lowered_text = normalize_text(full_text).lower()
@@ -443,6 +445,12 @@ def classify_ipo_entry(entry: dict[str, Any], record_type: str) -> dict[str, Any
     extracted_open_date, extracted_close_date = extract_issue_dates(full_text)
     open_date = _normalize_issue_date(entry.get("issue_open_date")) or extracted_open_date
     close_date = _normalize_issue_date(entry.get("issue_close_date")) or extracted_close_date
+
+    if open_date and close_date:
+        open_ad = _to_date(open_date)
+        close_ad = _to_date(close_date)
+        if open_ad and close_ad and close_ad < open_ad:
+            close_date = extracted_close_date if extracted_close_date != close_date else None
 
     explicit_status = normalize_issue_status(entry.get("issue_status"), default="")
     derived_status = derive_issue_status(open_date, close_date, nature, full_text)
