@@ -60,27 +60,6 @@
       "url": "https://merolagani.com/AnnouncementDetail.aspx?id=65857",
       "scraped_at_utc": "2026-05-26T02:27:59+00:00",
       "raw_text": "Everest Colour Limited is going to issue its 6,55,700.00 units of IPO shares to the general public starting from 22nd - 27th Jestha, 2083 Everest Colour Limited is going to issue its 6,55,700.00 units of IPO shares to the general public starting from 22nd - 27th Jestha, 2083"
-    },
-    {
-      "record_type": "issue",
-      "nature": "issue",
-      "issue_status": "upcoming",
-      "issue_type": "ipo-general",
-      "company_name": "Sanigad Hydro Limited",
-      "title": "Sanigad Hydro Limited IPO-General",
-      "details": "IPO-General Sanigad Hydro Limited units 4674000 price per unit 100 minimum apply 10 open 2083-02-14 close 2083-02-20 status Coming Soon",
-      "reserved_for": [],
-      "issue_open_date": "2083-02-14",
-      "issue_close_date": "2083-02-20",
-      "min_quantity": 10.0,
-      "max_quantity": null,
-      "total_quantity": 4674000.0,
-      "price_per_unit": 100.0,
-      "announcement_date": "2083-02-14",
-      "source": "nepselink_ipo_opening",
-      "url": "https://nepselink.com/ipo-opening",
-      "scraped_at_utc": "2026-05-26T02:27:59+00:00",
-      "raw_text": "Sanigad Hydro Limited IPO-General IPO-General Sanigad Hydro Limited units 4674000 price per unit 100 minimum apply 10 open 2083-02-14 close 2083-02-20 status Coming Soon"
     }
   ],
   "open": [
