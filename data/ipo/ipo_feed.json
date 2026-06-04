@@ -1,17 +1,17 @@
 {
   "meta": {
-    "generated_at_utc": "2026-06-04T02:48:59+00:00",
+    "generated_at_utc": "2026-06-04T09:44:23+00:00",
     "sources": {
-      "merolagani_upcoming": 2,
+      "merolagani_upcoming": 3,
       "nepselink_ipo_opening": 10,
-      "merolagani_results": 2,
+      "merolagani_results": 3,
       "nepse_disclosures": 0
     },
     "stale_sources": [],
-    "upcoming_count": 2,
+    "upcoming_count": 3,
     "open_count": 1,
     "closed_count": 7,
-    "result_count": 2,
+    "result_count": 3,
     "unknown_count": 0
   },
   "upcoming": [
@@ -35,8 +35,31 @@
       "announcement_date": "May 24, 2026",
       "source": "merolagani_upcoming",
       "url": "https://merolagani.com/AnnouncementDetail.aspx?id=65857",
-      "scraped_at_utc": "2026-06-04T02:48:59+00:00",
+      "scraped_at_utc": "2026-06-04T09:44:23+00:00",
       "raw_text": "Everest Colour Limited is going to issue its 6,55,700.00 units of IPO shares to the general public starting from 22nd - 27th Jestha, 2083 Everest Colour Limited is going to issue its 6,55,700.00 units of IPO shares to the general public starting from 22nd - 27th Jestha, 2083"
+    },
+    {
+      "record_type": "issue",
+      "nature": "issue",
+      "issue_status": "upcoming",
+      "issue_type": "ipo",
+      "company_name": "Mount Everest Power Development Limited",
+      "title": "Mount Everest Power Development Limited is going to issue its 14,27,600.00 units of IPO shares to the general public starting from 3rd - 8th Ashad, 2083",
+      "details": "Mount Everest Power Development Limited is going to issue its 14,27,600.00 units of IPO shares to the general public starting from 3rd - 8th Ashad, 2083",
+      "reserved_for": [
+        "general_public"
+      ],
+      "issue_open_date": null,
+      "issue_close_date": null,
+      "min_quantity": null,
+      "max_quantity": null,
+      "total_quantity": 1427600.0,
+      "price_per_unit": null,
+      "announcement_date": "Jun 04, 2026",
+      "source": "merolagani_upcoming",
+      "url": "https://merolagani.com/AnnouncementDetail.aspx?id=65992",
+      "scraped_at_utc": "2026-06-04T09:44:23+00:00",
+      "raw_text": "Mount Everest Power Development Limited is going to issue its 14,27,600.00 units of IPO shares to the general public starting from 3rd - 8th Ashad, 2083 Mount Everest Power Development Limited is going to issue its 14,27,600.00 units of IPO shares to the general public starting from 3rd - 8th Ashad, 2083"
     },
     {
       "record_type": "issue",
@@ -58,7 +81,7 @@
       "announcement_date": "Jun 02, 2026",
       "source": "merolagani_upcoming",
       "url": "https://merolagani.com/AnnouncementDetail.aspx?id=65968",
-      "scraped_at_utc": "2026-06-04T02:48:59+00:00",
+      "scraped_at_utc": "2026-06-04T09:44:23+00:00",
       "raw_text": "Sarvottam Paints Industries Limited is going to issue its 7,05,500.00 units of IPO shares to the general public starting from 28th Jestha - 2nd Ashad, 2083 Sarvottam Paints Industries Limited is going to issue its 7,05,500.00 units of IPO shares to the general public starting from 28th Jestha - 2nd Ashad, 2083"
     }
   ],
@@ -81,7 +104,7 @@
       "announcement_date": "2083-02-18",
       "source": "nepselink_ipo_opening",
       "url": "https://nepselink.com/ipo-opening",
-      "scraped_at_utc": "2026-06-04T02:48:59+00:00",
+      "scraped_at_utc": "2026-06-04T09:44:23+00:00",
       "raw_text": "Sanigad Hydro Limited IPO-General IPO-General Sanigad Hydro Limited units 4674000 price per unit 100 minimum apply 10 open 2083-02-18 close 2083-02-21 status Open"
     }
   ],
@@ -104,7 +127,7 @@
       "announcement_date": "2083-02-13",
       "source": "nepselink_ipo_opening",
       "url": "https://nepselink.com/ipo-opening",
-      "scraped_at_utc": "2026-06-04T02:48:59+00:00",
+      "scraped_at_utc": "2026-06-04T09:44:23+00:00",
       "raw_text": "Kalanga Hydro Limited IPO-General IPO-General Kalanga Hydro Limited units 2870000 price per unit 100 minimum apply 10 open 2083-02-08 close 2083-02-13 status Closed"
     },
     {
@@ -125,7 +148,7 @@
       "announcement_date": "2083-01-28",
       "source": "nepselink_ipo_opening",
       "url": "https://nepselink.com/ipo-opening",
-      "scraped_at_utc": "2026-06-04T02:48:59+00:00",
+      "scraped_at_utc": "2026-06-04T09:44:23+00:00",
       "raw_text": "Taksar Pikhuwa Khola Hydropower Limited IPO-General IPO-General Taksar Pikhuwa Khola Hydropower Limited units 2515455 price per unit 100 minimum apply 10 open 2083-01-23 close 2083-01-28 status Closed"
     },
     {
@@ -146,7 +169,7 @@
       "announcement_date": "2083-01-22",
       "source": "nepselink_ipo_opening",
       "url": "https://nepselink.com/ipo-opening",
-      "scraped_at_utc": "2026-06-04T02:48:59+00:00",
+      "scraped_at_utc": "2026-06-04T09:44:23+00:00",
       "raw_text": "Yambaling Hydropower Limited IPO-General IPO-General Yambaling Hydropower Limited units 1743000 price per unit 100 minimum apply 10 open 2083-01-16 close 2083-01-22 status Closed"
     },
     {
@@ -167,7 +190,7 @@
       "announcement_date": "2083-01-08",
       "source": "nepselink_ipo_opening",
       "url": "https://nepselink.com/ipo-opening",
-      "scraped_at_utc": "2026-06-04T02:48:59+00:00",
+      "scraped_at_utc": "2026-06-04T09:44:23+00:00",
       "raw_text": "Sopan Pharmaceuticals Limited IPO-General IPO-General Sopan Pharmaceuticals Limited units 3474900 price per unit 100 minimum apply 10 open 2083-01-03 close 2083-01-08 status Closed"
     },
     {
@@ -188,7 +211,7 @@
       "announcement_date": "2083-01-02",
       "source": "nepselink_ipo_opening",
       "url": "https://nepselink.com/ipo-opening",
-      "scraped_at_utc": "2026-06-04T02:48:59+00:00",
+      "scraped_at_utc": "2026-06-04T09:44:23+00:00",
       "raw_text": "Snow Rivers Limited IPO-General IPO-General Snow Rivers Limited units 778125 price per unit 100 minimum apply 10 open 2083-01-29 close 2083-01-02 status Closed"
     },
     {
@@ -209,7 +232,7 @@
       "announcement_date": "2083-01-02",
       "source": "nepselink_ipo_opening",
       "url": "https://nepselink.com/ipo-opening",
-      "scraped_at_utc": "2026-06-04T02:48:59+00:00",
+      "scraped_at_utc": "2026-06-04T09:44:23+00:00",
       "raw_text": "Appolo Hydropower Limited IPO-GENERAL IPO-GENERAL Appolo Hydropower Limited units 780200 price per unit 100 minimum apply 10 open 2082-12-26 close 2083-01-02 status Closed"
     },
     {
@@ -230,11 +253,34 @@
       "announcement_date": "2082-12-25",
       "source": "nepselink_ipo_opening",
       "url": "https://nepselink.com/ipo-opening",
-      "scraped_at_utc": "2026-06-04T02:48:59+00:00",
+      "scraped_at_utc": "2026-06-04T09:44:23+00:00",
       "raw_text": "Kalinchowk Hydropower Limited IPO-General IPO-General Kalinchowk Hydropower Limited units 684750 price per unit 100 minimum apply 10 open 2082-12-22 close 2082-12-25 status Closed"
     }
   ],
   "results": [
+    {
+      "record_type": "result",
+      "nature": "result",
+      "issue_status": "result",
+      "issue_type": "ipo",
+      "company_name": "Mount Everest Power Development Limited",
+      "title": "Mount Everest Power Development Limited has distributed its 8,60,000.00 units of IPO shares to the project affected local residents of Solukhumbu District, Solu Dudhkunda Municipality Ward No. 01 & 02 and other Wards of affected areas on Jestha 20, 2083 and the refund process for non-allottee's begins from Jestha 25, 2083",
+      "details": "Mount Everest Power Development Limited has distributed its 8,60,000.00 units of IPO shares to the project affected local residents of Solukhumbu District, Solu Dudhkunda Municipality Ward No. 01 & 02 and other Wards of affected areas on Jestha 20, 2083 and the refund process for non-allottee's begins from Jestha 25, 2083",
+      "reserved_for": [
+        "local_residents"
+      ],
+      "issue_open_date": null,
+      "issue_close_date": null,
+      "min_quantity": null,
+      "max_quantity": null,
+      "total_quantity": 860000.0,
+      "price_per_unit": null,
+      "announcement_date": "Jun 04, 2026",
+      "source": "merolagani_announcements",
+      "url": "https://merolagani.com/AnnouncementDetail.aspx?id=65990",
+      "scraped_at_utc": "2026-06-04T09:44:23+00:00",
+      "raw_text": "Mount Everest Power Development Limited has distributed its 8,60,000.00 units of IPO shares to the project affected local residents of Solukhumbu District, Solu Dudhkunda Municipality Ward No. 01 & 02 and other Wards of affected areas on Jestha 20, 2083 and the refund process for non-allottee's begins from Jestha 25, 2083 Mount Everest Power Development Limited has distributed its 8,60,000.00 units of IPO shares to the project affected local residents of Solukhumbu District, Solu Dudhkunda Municipality Ward No. 01 & 02 and other Wards of affected areas on Jestha 20, 2083 and the refund process for non-allottee's begins from Jestha 25, 2083"
+    },
     {
       "record_type": "result",
       "nature": "result",
@@ -253,7 +299,7 @@
       "announcement_date": "Jun 04, 2026",
       "source": "merolagani_announcements",
       "url": "https://merolagani.com/AnnouncementDetail.aspx?id=65989",
-      "scraped_at_utc": "2026-06-04T02:48:59+00:00",
+      "scraped_at_utc": "2026-06-04T09:44:23+00:00",
       "raw_text": "United Ajod Insurance Limited has distributed its 100:10 ratio right share (23,10,000.00 units @ Rs.100.00 per unit) to its shareholders on Jestha 19, 2083 United Ajod Insurance Limited has distributed its 100:10 ratio right share (23,10,000.00 units @ Rs.100.00 per unit) to its shareholders on Jestha 19, 2083"
     },
     {
@@ -274,7 +320,7 @@
       "announcement_date": "Jun 03, 2026",
       "source": "merolagani_announcements",
       "url": "https://merolagani.com/AnnouncementDetail.aspx?id=65981",
-      "scraped_at_utc": "2026-06-04T02:48:59+00:00",
+      "scraped_at_utc": "2026-06-04T09:44:23+00:00",
       "raw_text": "Himalayan Power Partner Limited has distributed its 1:0.5 ratio right share (53,27,085.00 units @ Rs.100.00 per unit) to its shareholders on Jestha 19, 2083 and the refund process for non-allottee's begins from Jestha 21, 2083 Himalayan Power Partner Limited has distributed its 1:0.5 ratio right share (53,27,085.00 units @ Rs.100.00 per unit) to its shareholders on Jestha 19, 2083 and the refund process for non-allottee's begins from Jestha 21, 2083"
     }
   ],
