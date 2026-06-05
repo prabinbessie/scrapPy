@@ -18,6 +18,10 @@ IPO_ANNOUNCEMENTS_URL = os.getenv(
 NEPSELINK_IPO_OPENING_URL = os.getenv(
     "NEPSELINK_IPO_OPENING_URL", "https://nepselink.com/ipo-opening"
 )
+SHAREHUB_IPO_URL = os.getenv(
+    "SHAREHUB_IPO_URL",
+    "https://sharehubnepal.com/investment/upcoming-public-offerings",
+)
 IPO_RESULTS_URL = os.getenv("IPO_RESULTS_URL", "https://merolagani.com/IpoResult.aspx")
 SHARESANSAR_LIVE_URL = os.getenv("SHARESANSAR_LIVE_URL", "https://www.sharesansar.com/live-trading")
 

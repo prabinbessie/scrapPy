@@ -1,9 +1,35 @@
 from scraper.ipo.classifier import (
+    _BS_MONTH_DAYS,
+    _BS_YEAR_START,
     classify_ipo_entry,
     detect_issue_type,
     derive_issue_status,
     extract_quantities_and_price,
 )
+
+
+def test_bs_calendar_tables_match_year_length() -> None:
+    for year, days in _BS_MONTH_DAYS.items():
+        next_start = _BS_YEAR_START.get(year + 1)
+        if next_start is None:
+            continue
+        assert sum(days) == (next_start - _BS_YEAR_START[year]).days, year
+
+
+def test_classify_ipo_entry_prefers_source_number_over_text() -> None:
+    entry = {
+        "title": "Demo Co IPO",
+        "details": "roughly 500 units are referenced in the writeup",
+        "total_quantity": 0,
+        "company": "Demo Co",
+        "issue_type": "ipo",
+        "url": "https://example.com/demo",
+        "source": "test_source",
+    }
+
+    classified = classify_ipo_entry(entry, "issue")
+
+    assert classified["total_quantity"] == 0.0
 
 
 def test_detect_issue_type_debenture() -> None:
@@ -58,6 +84,22 @@ def test_classify_ipo_entry_nepali_month_range_defaults_to_upcoming() -> None:
     assert classified["issue_status"] == "upcoming"
     assert classified["issue_open_date"] == "2082-12-22"
     assert classified["issue_close_date"] == "2082-12-25"
+
+
+def test_classify_ipo_entry_accepts_ashad_month_spelling() -> None:
+    entry = {
+        "title": "Mount Everest Power Development Limited is going to issue its 14,27,600.00 units of IPO shares to the general public starting from 3rd - 8th Ashad, 2083",
+        "details": "Mount Everest Power Development Limited is going to issue its 14,27,600.00 units of IPO shares to the general public starting from 3rd - 8th Ashad, 2083",
+        "announcement_date": "Jun 04, 2026",
+        "url": "https://merolagani.com/AnnouncementDetail.aspx?id=65992",
+        "source": "merolagani_upcoming",
+    }
+
+    classified = classify_ipo_entry(entry, "issue")
+
+    assert classified["issue_open_date"] == "2083-03-03"
+    assert classified["issue_close_date"] == "2083-03-08"
+    assert classified["issue_status"] == "upcoming"
 
 
 def test_classify_ipo_result_entry_extracts_clean_company_name() -> None:

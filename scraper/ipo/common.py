@@ -4,6 +4,7 @@ from typing import Any
 
 ISSUE_STATUS_ALIASES: dict[str, str] = {
     "coming soon": "upcoming",
+    "comingsoon": "upcoming",
     "upcoming": "upcoming",
     "open": "open",
     "live": "open",

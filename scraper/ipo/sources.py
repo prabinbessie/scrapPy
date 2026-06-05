@@ -1,6 +1,8 @@
 from __future__ import annotations
 
+import json
 import logging
+import re
 import time
 from concurrent.futures import ThreadPoolExecutor
 from collections.abc import Callable
@@ -16,6 +18,7 @@ from scraper.config import (
     IPO_UPCOMING_URL,
     NEPSELINK_IPO_OPENING_URL,
     SCRAPPY_TIMEOUT_SECONDS,
+    SHAREHUB_IPO_URL,
 )
 from scraper.ipo.common import normalize_issue_status
 from scraper.nepse.client import NepseDataClient
@@ -295,6 +298,158 @@ def parse_nepselink_ipo_opening_page(html: str, source_url: str) -> list[dict[st
     return records
 
 
+SHAREHUB_TYPE_LABELS: dict[str, str] = {
+    "ipo": "ipo",
+    "fpo": "fpo",
+    "debenture": "debenture",
+    "bondordebenture": "debenture",
+    "mutualfund": "mutual fund",
+    "right": "right share",
+    "rightshare": "right share",
+}
+
+SHAREHUB_RESERVED_LABELS: dict[str, str] = {
+    "generalpublic": "general public",
+    "local": "local residents",
+    "localresidents": "local residents",
+    "foreignemployment": "foreign employment",
+    "migrantworkers": "foreign employment",
+    "staff": "employees",
+    "employee": "employees",
+    "employees": "employees",
+}
+
+_SHAREHUB_PUSH_MARKER = "self.__next_f.push([1,"
+_CAMEL_BOUNDARY = re.compile(r"(?<=[a-z0-9])(?=[A-Z])")
+
+
+def _normalize_ws(value: Any) -> str:
+    return " ".join(str(value or "").split()).strip()
+
+
+def _humanize_label(value: str) -> str:
+    return _CAMEL_BOUNDARY.sub(" ", value).replace("_", " ").strip().lower()
+
+
+def _coerce_float(value: Any) -> float | None:
+    if value is None or isinstance(value, bool):
+        return None
+    try:
+        return float(value)
+    except (TypeError, ValueError):
+        return _to_float(str(value))
+
+
+def _iso_date(value: Any) -> str | None:
+    text = _normalize_ws(value)
+    if not text:
+        return None
+    return text.split("T", 1)[0]
+
+
+def _extract_sharehub_offerings(html: str) -> list[dict[str, Any]]:
+    """Pull the `initialData` array of offerings out of the Next.js RSC stream."""
+    decoder = json.JSONDecoder()
+    search_from = 0
+
+    while True:
+        push_at = html.find(_SHAREHUB_PUSH_MARKER, search_from)
+        if push_at == -1:
+            return []
+
+        quote_at = html.find('"', push_at + len(_SHAREHUB_PUSH_MARKER))
+        if quote_at == -1:
+            return []
+        search_from = quote_at + 1
+
+        try:
+            chunk, _ = decoder.raw_decode(html, quote_at)
+        except (ValueError, json.JSONDecodeError):
+            continue
+
+        marker = '"initialData":'
+        key_at = chunk.find(marker)
+        if key_at == -1:
+            continue
+
+        value_at = key_at + len(marker)
+        if chunk[value_at:].lstrip()[:1] != "[":
+            continue
+
+        try:
+            offerings, _ = decoder.raw_decode(chunk, chunk.index("[", value_at))
+        except (ValueError, json.JSONDecodeError):
+            continue
+
+        if isinstance(offerings, list):
+            return [item for item in offerings if isinstance(item, dict)]
+
+
+def parse_sharehub_ipo_page(html: str, source_url: str) -> list[dict[str, Any]]:
+    records: list[dict[str, Any]] = []
+
+    for item in _extract_sharehub_offerings(html):
+        company_name = _normalize_ws(item.get("name"))
+        if not company_name:
+            continue
+
+        raw_type = str(item.get("type") or "").strip().lower()
+        issue_type = SHAREHUB_TYPE_LABELS.get(raw_type) or _humanize_label(
+            str(item.get("type") or "")
+        )
+
+        reserved_label = SHAREHUB_RESERVED_LABELS.get(
+            str(item.get("for") or "").strip().lower()
+        ) or _humanize_label(str(item.get("for") or ""))
+
+        open_date = _iso_date(item.get("openingDate"))
+        close_date = _iso_date(item.get("closingDate"))
+        total_quantity = _coerce_float(item.get("units"))
+        price_per_unit = _coerce_float(item.get("price"))
+
+        normalized_status = normalize_issue_status(item.get("status"))
+        announcement_date = open_date
+        if normalized_status == "closed":
+            announcement_date = close_date or open_date
+
+        slug = _normalize_ws(item.get("slug"))
+        url = f"{source_url.rstrip('/')}/{slug}" if slug else source_url
+        symbol = _normalize_ws(item.get("symbol"))
+
+        details = (
+            f"{company_name} {issue_type} for {reserved_label}. "
+            f"Symbol {symbol or '-'}. Units {item.get('units')} "
+            f"price per unit {item.get('price')}. "
+            f"Open {open_date or '-'} close {close_date or '-'} "
+            f"status {item.get('status')}"
+        )
+
+        records.append(
+            {
+                "title": f"{company_name} {issue_type}".strip(),
+                "details": details,
+                "announcement_date": announcement_date,
+                "url": url,
+                "source": "sharehub_ipo",
+                "symbol": symbol,
+                "company": company_name,
+                "issue_type": issue_type,
+                "issue_open_date": open_date,
+                "issue_close_date": close_date,
+                "total_quantity": total_quantity,
+                "price_per_unit": price_per_unit,
+                "issue_status": normalized_status,
+            }
+        )
+
+    return records
+
+
+def fetch_sharehub_ipo_records() -> list[dict[str, Any]]:
+    html = fetch_html(SHAREHUB_IPO_URL)
+    return parse_sharehub_ipo_page(html, SHAREHUB_IPO_URL)
+
+
 def fetch_upcoming_ipo_records() -> list[dict[str, Any]]:
     html = fetch_html(IPO_UPCOMING_URL)
     return parse_upcoming_ipo_page(html, IPO_UPCOMING_URL)
@@ -416,6 +571,7 @@ def fetch_all_ipo_source_records(
     client: NepseDataClient | None = None,
 ) -> dict[str, list[dict[str, Any]]]:
     fetch_jobs: dict[str, tuple[Callable[[], list[dict[str, Any]]], str]] = {
+        "sharehub_records": (fetch_sharehub_ipo_records, "sharehub_ipo"),
         "upcoming_records": (fetch_upcoming_ipo_records, "merolagani_upcoming"),
         "nepselink_records": (
             fetch_nepselink_ipo_opening_records,
@@ -435,12 +591,14 @@ def fetch_all_ipo_source_records(
         }
         fetched = {result_key: future.result() for result_key, future in futures.items()}
 
+    sharehub_records = fetched["sharehub_records"]
     upcoming_records = fetched["upcoming_records"]
     nepselink_records = fetched["nepselink_records"]
     result_records = fetched["result_records"]
     disclosure_records = fetched["disclosure_records"]
 
     return {
+        "sharehub_sources": sharehub_records,
         "upcoming_sources": upcoming_records + nepselink_records,
         "merolagani_upcoming_sources": upcoming_records,
         "result_sources": result_records,

@@ -21,6 +21,7 @@ STATUS_GROUP_KEYS: tuple[str, ...] = ("upcoming", "open", "closed", "result", "u
 
 _CARRY_FORWARD_SOURCES: frozenset[str] = frozenset(
     {
+        "sharehub_ipo",
         "merolagani_upcoming",
         "nepselink_ipo_opening",
         "merolagani_results",
@@ -102,6 +103,9 @@ def _merge_record(primary: dict[str, Any], secondary: dict[str, Any]) -> None:
     for field in _MERGEABLE_NUMERIC_FIELDS:
         if primary.get(field) is None and secondary.get(field) is not None:
             primary[field] = secondary[field]
+
+    if not primary.get("symbol") and secondary.get("symbol"):
+        primary["symbol"] = secondary["symbol"]
 
     if primary.get("issue_open_date") is None and secondary.get("issue_open_date"):
         primary["issue_open_date"] = secondary["issue_open_date"]
@@ -260,13 +264,14 @@ def scrape_ipo_to_json() -> dict[str, Any]:
 
     source_bundle = fetch_all_ipo_source_records()
 
+    sharehub_raw = source_bundle.get("sharehub_sources", [])
     upcoming_raw = source_bundle.get("upcoming_sources", [])
     merolagani_upcoming_raw = source_bundle.get("merolagani_upcoming_sources", upcoming_raw)
     results_raw = source_bundle.get("result_sources", [])
     disclosures_raw = source_bundle.get("nepse_disclosure_sources", [])
     nepselink_raw = source_bundle.get("nepselink_sources", [])
 
-    combined_issues_raw = upcoming_raw + disclosures_raw
+    combined_issues_raw = sharehub_raw + upcoming_raw + disclosures_raw
 
     classified_issues = _classify_entries(combined_issues_raw, "issue")
     classified_results = _classify_entries(results_raw, "result")
@@ -289,6 +294,7 @@ def scrape_ipo_to_json() -> dict[str, Any]:
     results = _sort_latest(_deduplicate(deduped_results + grouped_issues.get("result", [])))
 
     source_counts = {
+        "sharehub_ipo": _count_dict_items(sharehub_raw),
         "merolagani_upcoming": _count_dict_items(merolagani_upcoming_raw),
         "nepselink_ipo_opening": _count_dict_items(nepselink_raw),
         "merolagani_results": _count_dict_items(results_raw),

@@ -1,3 +1,4 @@
+import json
 from pathlib import Path
 
 from scraper.io import append_rows_to_csv
@@ -6,8 +7,18 @@ from scraper.ipo.sources import (
     parse_announcement_result_page,
     parse_ipo_result_page,
     parse_nepselink_ipo_opening_page,
+    parse_sharehub_ipo_page,
     parse_upcoming_ipo_page,
 )
+
+
+def _build_sharehub_html(offerings: list[dict]) -> str:
+    """Recreate the Next.js RSC stream that sharehubnepal embeds the data in."""
+    payload = (
+        '7:["$","$L22",null,{"initialData":' + json.dumps(offerings) + ',"isLoading":false}]\n'
+    )
+    script = "<script>self.__next_f.push([1," + json.dumps(payload) + "])</script>"
+    return f"<!doctype html><html><body><div id='app'></div>{script}</body></html>"
 
 
 def test_parse_upcoming_ipo_page() -> None:
@@ -101,6 +112,73 @@ def test_parse_nepselink_ipo_opening_page() -> None:
     assert rows[1]["announcement_date"] == "2082-11-22"
 
 
+def test_parse_sharehub_ipo_page() -> None:
+    html = _build_sharehub_html(
+        [
+            {
+                "id": 3832,
+                "slug": "3832-ipo-general-public-mount-everest-power-development-limited",
+                "symbol": "MEPDL",
+                "name": "Mount Everest Power Development Limited",
+                "units": 1427600,
+                "price": 100,
+                "openingDate": "2026-06-17T00:00:00",
+                "closingDate": "2026-06-22T00:00:00",
+                "type": "Ipo",
+                "for": "GeneralPublic",
+                "status": "ComingSoon",
+            },
+            {
+                "id": 3837,
+                "slug": "3837-bond-nabil-debenture",
+                "symbol": "NABIL8",
+                "name": "8% Nabil Perpetual Non cumulative Preference Share",
+                "units": 5000000,
+                "price": 100,
+                "openingDate": None,
+                "closingDate": None,
+                "type": "BondOrDebenture",
+                "for": "GeneralPublic",
+                "status": "Closed",
+            },
+            {"id": 1, "slug": "x", "name": "", "type": "Ipo"},  # skipped: no name
+        ]
+    )
+
+    rows = parse_sharehub_ipo_page(
+        html, "https://sharehubnepal.com/investment/upcoming-public-offerings"
+    )
+
+    assert len(rows) == 2
+
+    ipo = rows[0]
+    assert ipo["source"] == "sharehub_ipo"
+    assert ipo["symbol"] == "MEPDL"
+    assert ipo["company"] == "Mount Everest Power Development Limited"
+    assert ipo["issue_type"] == "ipo"
+    assert ipo["issue_open_date"] == "2026-06-17"
+    assert ipo["issue_close_date"] == "2026-06-22"
+    assert ipo["total_quantity"] == 1427600.0
+    assert ipo["price_per_unit"] == 100.0
+    assert ipo["issue_status"] == "upcoming"
+    assert ipo["url"].endswith("/3832-ipo-general-public-mount-everest-power-development-limited")
+
+    debenture = rows[1]
+    assert debenture["issue_type"] == "debenture"
+    assert debenture["issue_status"] == "closed"
+
+
+def test_parse_sharehub_ipo_page_without_payload_returns_empty() -> None:
+    assert parse_sharehub_ipo_page("<html><body>no data</body></html>", "https://x") == []
+
+
+def test_parse_sharehub_ipo_page_ignores_non_array_initial_data() -> None:
+    payload = '7:["$","$L22",null,{"initialData":null,"sidebar":[{"name":"Not An Offering"}]}]\n'
+    script = "<script>self.__next_f.push([1," + json.dumps(payload) + "])</script>"
+
+    assert parse_sharehub_ipo_page(f"<html><body>{script}</body></html>", "https://x") == []
+
+
 def test_append_rows_to_csv(tmp_path: Path) -> None:
     target = tmp_path / "sample.csv"
     fieldnames = ["a", "b"]
@@ -151,6 +229,7 @@ def test_fetch_all_ipo_source_records_tolerates_source_processing_error(monkeypa
     def broken_upcoming() -> list[dict]:
         raise ValueError("unexpected parser failure")
 
+    monkeypatch.setattr(sources, "fetch_sharehub_ipo_records", lambda: [])
     monkeypatch.setattr(sources, "fetch_upcoming_ipo_records", broken_upcoming)
     monkeypatch.setattr(sources, "fetch_nepselink_ipo_opening_records", lambda: [])
     monkeypatch.setattr(sources, "fetch_ipo_result_records", lambda: [])
@@ -158,6 +237,7 @@ def test_fetch_all_ipo_source_records_tolerates_source_processing_error(monkeypa
 
     bundle = fetch_all_ipo_source_records()
 
+    assert bundle["sharehub_sources"] == []
     assert bundle["upcoming_sources"] == []
     assert bundle["merolagani_upcoming_sources"] == []
     assert bundle["result_sources"] == []

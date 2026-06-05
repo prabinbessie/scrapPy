@@ -17,10 +17,20 @@ _BS_YEAR_START: dict[int, date] = {
 }
 
 _BS_MONTH_DAYS: dict[int, list[int]] = {
-    2082: [31, 31, 32, 32, 31, 30, 30, 30, 29, 30, 30, 30],
+    2082: [31, 31, 32, 32, 31, 30, 30, 29, 30, 29, 30, 30],
     2083: [31, 31, 32, 32, 31, 30, 30, 29, 30, 29, 30, 30],
     2084: [31, 32, 31, 32, 31, 30, 30, 29, 30, 29, 30, 30],
 }
+
+for _bs_year, _days in _BS_MONTH_DAYS.items():
+    _next_start = _BS_YEAR_START.get(_bs_year + 1)
+    if _next_start is not None:
+        _expected = (_next_start - _BS_YEAR_START[_bs_year]).days
+        if sum(_days) != _expected:
+            raise ValueError(
+                f"BS calendar table for {_bs_year} sums to {sum(_days)} days "
+                f"but the year spans {_expected}"
+            )
 
 _UNKNOWN_DATE_TOKENS: frozenset[str] = frozenset(
     {
@@ -92,17 +102,43 @@ RESULT_KEYWORDS: tuple[str, ...] = (
 
 NEPALI_MONTH_TO_BS_MONTH: dict[str, int] = {
     "baishakh": 1,
+    "baisakh": 1,
+    "baishak": 1,
+    "vaisakh": 1,
     "jestha": 2,
+    "jeshtha": 2,
+    "jyestha": 2,
     "ashadh": 3,
+    "ashad": 3,
+    "ashar": 3,
+    "asadh": 3,
+    "asar": 3,
     "shrawan": 4,
+    "shravan": 4,
+    "srawan": 4,
+    "sawan": 4,
     "bhadra": 5,
+    "bhadau": 5,
+    "bhado": 5,
     "ashwin": 6,
+    "aswin": 6,
+    "ashoj": 6,
+    "asoj": 6,
     "kartik": 7,
+    "kattik": 7,
     "mangsir": 8,
+    "mangshir": 8,
+    "marga": 8,
     "poush": 9,
+    "paush": 9,
+    "push": 9,
     "magh": 10,
     "falgun": 11,
+    "phalgun": 11,
+    "fagun": 11,
+    "phagun": 11,
     "chaitra": 12,
+    "chait": 12,
 }
 
 NEPALI_MONTH_TOKENS: tuple[str, ...] = tuple(NEPALI_MONTH_TO_BS_MONTH)
@@ -405,6 +441,12 @@ def _coerce_float(value: Any) -> float | None:
     return None
 
 
+def _coalesce_number(explicit: Any, fallback: float | None) -> float | None:
+    """Prefer a source-provided number, even 0, over one parsed from free text."""
+    coerced = _coerce_float(explicit)
+    return coerced if coerced is not None else fallback
+
+
 def extract_quantities_and_price(
     text: str,
 ) -> tuple[float | None, float | None, float | None, float | None]:
@@ -486,19 +528,21 @@ def classify_ipo_entry(entry: dict[str, Any], record_type: str) -> dict[str, Any
     ):
         issue_status = derived_status
 
-    min_quantity, max_quantity, total_quantity, price_per_unit = extract_quantities_and_price(
-        full_text
+    text_min, max_quantity, text_total, text_price = extract_quantities_and_price(full_text)
+    min_quantity = _coalesce_number(entry.get("min_quantity"), text_min)
+    total_quantity = _coalesce_number(entry.get("total_quantity"), text_total)
+    price_per_unit = _coalesce_number(entry.get("price_per_unit"), text_price)
+    company_name = (
+        normalize_text(str(entry.get("company") or "")) or extract_company_name(full_text) or ""
     )
-    min_quantity = _coerce_float(entry.get("min_quantity")) or min_quantity
-    total_quantity = _coerce_float(entry.get("total_quantity")) or total_quantity
-    price_per_unit = _coerce_float(entry.get("price_per_unit")) or price_per_unit
-    company_name = extract_company_name(full_text) or entry.get("company") or ""
+    symbol = normalize_text(str(entry.get("symbol") or "")).upper()
 
     return {
         "record_type": record_type,
         "nature": nature,
         "issue_status": issue_status,
         "issue_type": issue_type,
+        "symbol": symbol,
         "company_name": company_name,
         "title": title,
         "details": details,

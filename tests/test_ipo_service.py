@@ -78,6 +78,58 @@ def test_scrape_ipo_to_json_groups(monkeypatch, tmp_path: Path) -> None:
     assert (tmp_path / "ipo_feed.json").exists()
 
 
+def test_scrape_ipo_to_json_sharehub_wins_dedup(monkeypatch, tmp_path: Path) -> None:
+    mero_text = (
+        "Mount Everest Power Development Limited is going to issue its 14,27,600.00 "
+        "units of IPO shares to the general public starting from 3rd - 8th Ashad, 2083"
+    )
+    fake_bundle = {
+        "sharehub_sources": [
+            {
+                "title": "Mount Everest Power Development Limited ipo",
+                "details": "Mount Everest Power Development Limited ipo for general public. Units 1427600 price per unit 100.",
+                "announcement_date": "2026-06-17",
+                "url": "https://sharehubnepal.com/investment/upcoming-public-offerings/3832",
+                "source": "sharehub_ipo",
+                "symbol": "MEPDL",
+                "company": "Mount Everest Power Development Limited",
+                "issue_type": "ipo",
+                "issue_open_date": "2026-06-17",
+                "issue_close_date": "2026-06-22",
+                "total_quantity": 1427600.0,
+                "price_per_unit": 100.0,
+                "issue_status": "upcoming",
+            }
+        ],
+        "upcoming_sources": [
+            {
+                "title": mero_text,
+                "details": mero_text,
+                "announcement_date": "Jun 04, 2026",
+                "url": "https://merolagani.com/AnnouncementDetail.aspx?id=65992",
+                "source": "merolagani_upcoming",
+            }
+        ],
+        "result_sources": [],
+        "nepse_disclosure_sources": [],
+        "nepselink_sources": [],
+    }
+
+    monkeypatch.setattr(service, "fetch_all_ipo_source_records", lambda client=None: fake_bundle)
+    monkeypatch.setattr(service, "IPO_FEED_JSON", tmp_path / "ipo_feed.json")
+
+    payload = service.scrape_ipo_to_json()
+
+    assert payload["meta"]["upcoming_count"] == 1
+    assert payload["meta"]["sources"]["sharehub_ipo"] == 1
+    winner = payload["upcoming"][0]
+    assert winner["source"] == "sharehub_ipo"
+    assert winner["symbol"] == "MEPDL"
+    assert winner["issue_open_date"] == "2026-06-17"
+    assert winner["issue_close_date"] == "2026-06-22"
+    assert winner["price_per_unit"] == 100.0
+
+
 def test_scrape_ipo_to_json_deduplicates_quantity_format(monkeypatch, tmp_path: Path) -> None:
     fake_bundle = {
         "upcoming_sources": [
