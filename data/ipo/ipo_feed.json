@@ -1,17 +1,17 @@
 {
   "meta": {
-    "generated_at_utc": "2026-06-06T02:15:15+00:00",
+    "generated_at_utc": "2026-06-06T06:03:40+00:00",
     "sources": {
-      "sharehub_ipo": 20,
+      "sharehub_ipo": 7,
       "merolagani_upcoming": 2,
       "nepselink_ipo_opening": 10,
       "merolagani_results": 3,
       "nepse_disclosures": 0
     },
     "stale_sources": [],
-    "upcoming_count": 14,
+    "upcoming_count": 4,
     "open_count": 1,
-    "closed_count": 9,
+    "closed_count": 8,
     "result_count": 3,
     "unknown_count": 0
   },
@@ -23,22 +23,22 @@
       "issue_type": "ipo",
       "symbol": "MEPDL",
       "company_name": "Mount Everest Power Development Limited",
-      "title": "Mount Everest Power Development Limited ipo",
-      "details": "Mount Everest Power Development Limited ipo for general public. Symbol MEPDL. Units 1427600 price per unit 100. Open 2026-06-17 close 2026-06-22 status ComingSoon",
+      "title": "Mount Everest Power Development Limited is going to issue its 14,27,600.00 units of IPO shares to the general public starting from 3rd - 8th Ashad, 2083",
+      "details": "Mount Everest Power Development Limited is going to issue its 14,27,600.00 units of IPO shares to the general public starting from 3rd - 8th Ashad, 2083",
       "reserved_for": [
         "general_public"
       ],
-      "issue_open_date": "2026-06-17",
-      "issue_close_date": "2026-06-22",
+      "issue_open_date": "2083-03-03",
+      "issue_close_date": "2083-03-08",
       "min_quantity": null,
       "max_quantity": null,
       "total_quantity": 1427600.0,
       "price_per_unit": 100.0,
-      "announcement_date": "2026-06-17",
-      "source": "sharehub_ipo",
-      "url": "https://sharehubnepal.com/investment/upcoming-public-offerings/3832-ipo-general-public-mount-everest-power-development-limited",
-      "scraped_at_utc": "2026-06-06T02:15:15+00:00",
-      "raw_text": "Mount Everest Power Development Limited ipo Mount Everest Power Development Limited ipo for general public. Symbol MEPDL. Units 1427600 price per unit 100. Open 2026-06-17 close 2026-06-22 status ComingSoon"
+      "announcement_date": "Jun 04, 2026",
+      "source": "merolagani_upcoming",
+      "url": "https://merolagani.com/AnnouncementDetail.aspx?id=65992",
+      "scraped_at_utc": "2026-06-06T06:03:40+00:00",
+      "raw_text": "Mount Everest Power Development Limited is going to issue its 14,27,600.00 units of IPO shares to the general public starting from 3rd - 8th Ashad, 2083 Mount Everest Power Development Limited is going to issue its 14,27,600.00 units of IPO shares to the general public starting from 3rd - 8th Ashad, 2083"
     },
     {
       "record_type": "issue",
@@ -47,142 +47,22 @@
       "issue_type": "ipo",
       "symbol": "SARVOTTAM",
       "company_name": "Sarvottam Paints Industries Limited",
-      "title": "Sarvottam Paints Industries Limited ipo",
-      "details": "Sarvottam Paints Industries Limited ipo for general public. Symbol SARVOTTAM. Units 705500 price per unit 100. Open 2026-06-11 close 2026-06-16 status ComingSoon",
+      "title": "Sarvottam Paints Industries Limited is going to issue its 7,05,500.00 units of IPO shares to the general public starting from 28th Jestha - 2nd Ashad, 2083",
+      "details": "Sarvottam Paints Industries Limited is going to issue its 7,05,500.00 units of IPO shares to the general public starting from 28th Jestha - 2nd Ashad, 2083",
       "reserved_for": [
         "general_public"
       ],
-      "issue_open_date": "2026-06-11",
-      "issue_close_date": "2026-06-16",
+      "issue_open_date": "2083-02-28",
+      "issue_close_date": "2083-03-02",
       "min_quantity": 10.0,
       "max_quantity": null,
       "total_quantity": 705500.0,
       "price_per_unit": 100.0,
-      "announcement_date": "2026-06-11",
-      "source": "sharehub_ipo",
-      "url": "https://sharehubnepal.com/investment/upcoming-public-offerings/3834-ipo-general-public-sarvottam-paints-industries-limited",
-      "scraped_at_utc": "2026-06-06T02:15:15+00:00",
-      "raw_text": "Sarvottam Paints Industries Limited ipo Sarvottam Paints Industries Limited ipo for general public. Symbol SARVOTTAM. Units 705500 price per unit 100. Open 2026-06-11 close 2026-06-16 status ComingSoon"
-    },
-    {
-      "record_type": "issue",
-      "nature": "issue",
-      "issue_status": "upcoming",
-      "issue_type": "debenture",
-      "symbol": "SANIMAPNP",
-      "company_name": "8.25% Sanima Perpetual Non-cumulative Preference Share",
-      "title": "8.25% Sanima Perpetual Non-cumulative Preference Share debenture",
-      "details": "8.25% Sanima Perpetual Non-cumulative Preference Share debenture for general public. Symbol SANIMAPNP. Units 20000000 price per unit 100. Open - close - status ComingSoon",
-      "reserved_for": [
-        "general_public"
-      ],
-      "issue_open_date": null,
-      "issue_close_date": null,
-      "min_quantity": null,
-      "max_quantity": null,
-      "total_quantity": 20000000.0,
-      "price_per_unit": 100.0,
-      "announcement_date": null,
-      "source": "sharehub_ipo",
-      "url": "https://sharehubnepal.com/investment/upcoming-public-offerings/3637-ipo-general-public-825-sanima-perpetual-non-cumulative-preference-share",
-      "scraped_at_utc": "2026-06-06T02:15:15+00:00",
-      "raw_text": "8.25% Sanima Perpetual Non-cumulative Preference Share debenture 8.25% Sanima Perpetual Non-cumulative Preference Share debenture for general public. Symbol SANIMAPNP. Units 20000000 price per unit 100. Open - close - status ComingSoon"
-    },
-    {
-      "record_type": "issue",
-      "nature": "issue",
-      "issue_status": "upcoming",
-      "issue_type": "debenture",
-      "symbol": "NMBPNP",
-      "company_name": "8.25% NMB Perpetual Non cumulative Preference Share 2081/82",
-      "title": "8.25% NMB Perpetual Non cumulative Preference Share 2081/82 debenture",
-      "details": "8.25% NMB Perpetual Non cumulative Preference Share 2081/82 debenture for general public. Symbol NMBPNP. Units 30000000 price per unit 100. Open - close - status ComingSoon",
-      "reserved_for": [
-        "general_public"
-      ],
-      "issue_open_date": null,
-      "issue_close_date": null,
-      "min_quantity": null,
-      "max_quantity": null,
-      "total_quantity": 30000000.0,
-      "price_per_unit": 100.0,
-      "announcement_date": null,
-      "source": "sharehub_ipo",
-      "url": "https://sharehubnepal.com/investment/upcoming-public-offerings/3636-ipo-general-public-825-nmb-perpetual-non-cumulative-preference-share-208182",
-      "scraped_at_utc": "2026-06-06T02:15:15+00:00",
-      "raw_text": "8.25% NMB Perpetual Non cumulative Preference Share 2081/82 debenture 8.25% NMB Perpetual Non cumulative Preference Share 2081/82 debenture for general public. Symbol NMBPNP. Units 30000000 price per unit 100. Open - close - status ComingSoon"
-    },
-    {
-      "record_type": "issue",
-      "nature": "issue",
-      "issue_status": "upcoming",
-      "issue_type": "debenture",
-      "symbol": "KSBBLPNP",
-      "company_name": "KSBBL 9% Perpetual Non cumulative Preference Share",
-      "title": "KSBBL 9% Perpetual Non cumulative Preference Share debenture",
-      "details": "KSBBL 9% Perpetual Non cumulative Preference Share debenture for general public. Symbol KSBBLPNP. Units 3500000 price per unit 100. Open - close - status ComingSoon",
-      "reserved_for": [
-        "general_public"
-      ],
-      "issue_open_date": null,
-      "issue_close_date": null,
-      "min_quantity": null,
-      "max_quantity": null,
-      "total_quantity": 3500000.0,
-      "price_per_unit": 100.0,
-      "announcement_date": null,
-      "source": "sharehub_ipo",
-      "url": "https://sharehubnepal.com/investment/upcoming-public-offerings/3737-ipo-general-public-ksbbl-9-perpetual-non-cumulative-preference-share",
-      "scraped_at_utc": "2026-06-06T02:15:15+00:00",
-      "raw_text": "KSBBL 9% Perpetual Non cumulative Preference Share debenture KSBBL 9% Perpetual Non cumulative Preference Share debenture for general public. Symbol KSBBLPNP. Units 3500000 price per unit 100. Open - close - status ComingSoon"
-    },
-    {
-      "record_type": "issue",
-      "nature": "issue",
-      "issue_status": "upcoming",
-      "issue_type": "debenture",
-      "symbol": "NABILPNP",
-      "company_name": "8% Nabil Perpetual Non cumulative Preference Share",
-      "title": "8% Nabil Perpetual Non cumulative Preference Share debenture",
-      "details": "8% Nabil Perpetual Non cumulative Preference Share debenture for general public. Symbol NABILPNP. Units 50000000 price per unit 100. Open - close - status ComingSoon",
-      "reserved_for": [
-        "general_public"
-      ],
-      "issue_open_date": null,
-      "issue_close_date": null,
-      "min_quantity": null,
-      "max_quantity": null,
-      "total_quantity": 50000000.0,
-      "price_per_unit": 100.0,
-      "announcement_date": null,
-      "source": "sharehub_ipo",
-      "url": "https://sharehubnepal.com/investment/upcoming-public-offerings/3671-ipo-general-public-8-nabil-perpetual-non-cumulative-preference-share",
-      "scraped_at_utc": "2026-06-06T02:15:15+00:00",
-      "raw_text": "8% Nabil Perpetual Non cumulative Preference Share debenture 8% Nabil Perpetual Non cumulative Preference Share debenture for general public. Symbol NABILPNP. Units 50000000 price per unit 100. Open - close - status ComingSoon"
-    },
-    {
-      "record_type": "issue",
-      "nature": "issue",
-      "issue_status": "upcoming",
-      "issue_type": "right share",
-      "symbol": "UPCL",
-      "company_name": "Universal Power Company Limited",
-      "title": "Universal Power Company Limited right share",
-      "details": "Universal Power Company Limited right share for general public. Symbol UPCL. Units 24851236 price per unit 100. Open - close - status ComingSoon",
-      "reserved_for": [
-        "general_public"
-      ],
-      "issue_open_date": null,
-      "issue_close_date": null,
-      "min_quantity": null,
-      "max_quantity": null,
-      "total_quantity": 24851236.0,
-      "price_per_unit": 100.0,
-      "announcement_date": null,
-      "source": "sharehub_ipo",
-      "url": "https://sharehubnepal.com/investment/upcoming-public-offerings/3124-ipo-general-public-universal-power-company-limited",
-      "scraped_at_utc": "2026-06-06T02:15:15+00:00",
-      "raw_text": "Universal Power Company Limited right share Universal Power Company Limited right share for general public. Symbol UPCL. Units 24851236 price per unit 100. Open - close - status ComingSoon"
+      "announcement_date": "Jun 02, 2026",
+      "source": "merolagani_upcoming",
+      "url": "https://merolagani.com/AnnouncementDetail.aspx?id=65968",
+      "scraped_at_utc": "2026-06-06T06:03:40+00:00",
+      "raw_text": "Sarvottam Paints Industries Limited is going to issue its 7,05,500.00 units of IPO shares to the general public starting from 28th Jestha - 2nd Ashad, 2083 Sarvottam Paints Industries Limited is going to issue its 7,05,500.00 units of IPO shares to the general public starting from 28th Jestha - 2nd Ashad, 2083"
     },
     {
       "record_type": "issue",
@@ -191,8 +71,8 @@
       "issue_type": "ipo",
       "symbol": "BENI",
       "company_name": "Beni Hydropower Project Limited",
-      "title": "Beni Hydropower Project Limited ipo",
-      "details": "Beni Hydropower Project Limited ipo for general public. Symbol BENI. Units 2080000 price per unit 100. Open - close - status ComingSoon",
+      "title": "Beni Hydropower Project Limited IPO",
+      "details": "Beni Hydropower Project Limited IPO for general public. Symbol BENI. Units 2080000 price per unit 100. Open - close - status ComingSoon",
       "reserved_for": [
         "general_public"
       ],
@@ -205,32 +85,8 @@
       "announcement_date": null,
       "source": "sharehub_ipo",
       "url": "https://sharehubnepal.com/investment/upcoming-public-offerings/3831-ipo-general-public-beni-hydropower-project-limited",
-      "scraped_at_utc": "2026-06-06T02:15:15+00:00",
-      "raw_text": "Beni Hydropower Project Limited ipo Beni Hydropower Project Limited ipo for general public. Symbol BENI. Units 2080000 price per unit 100. Open - close - status ComingSoon"
-    },
-    {
-      "record_type": "issue",
-      "nature": "issue",
-      "issue_status": "upcoming",
-      "issue_type": "right share",
-      "symbol": "DORDI",
-      "company_name": "Dordi Khola Hydropower Company Limited",
-      "title": "Dordi Khola Hydropower Company Limited right share",
-      "details": "Dordi Khola Hydropower Company Limited right share for general public. Symbol DORDI. Units 11938715 price per unit 100. Open - close - status ComingSoon",
-      "reserved_for": [
-        "general_public"
-      ],
-      "issue_open_date": null,
-      "issue_close_date": null,
-      "min_quantity": null,
-      "max_quantity": null,
-      "total_quantity": 11938715.0,
-      "price_per_unit": 100.0,
-      "announcement_date": null,
-      "source": "sharehub_ipo",
-      "url": "https://sharehubnepal.com/investment/upcoming-public-offerings/3674-right-share-general-public-dordi-khola-hydropower-company-limited",
-      "scraped_at_utc": "2026-06-06T02:15:15+00:00",
-      "raw_text": "Dordi Khola Hydropower Company Limited right share Dordi Khola Hydropower Company Limited right share for general public. Symbol DORDI. Units 11938715 price per unit 100. Open - close - status ComingSoon"
+      "scraped_at_utc": "2026-06-06T06:03:40+00:00",
+      "raw_text": "Beni Hydropower Project Limited IPO Beni Hydropower Project Limited IPO for general public. Symbol BENI. Units 2080000 price per unit 100. Open - close - status ComingSoon"
     },
     {
       "record_type": "issue",
@@ -239,8 +95,8 @@
       "issue_type": "ipo",
       "symbol": "SNL",
       "company_name": "Snow Rivers Limited",
-      "title": "Snow Rivers Limited ipo",
-      "details": "Snow Rivers Limited ipo for general public. Symbol SNL. Units 1875000 price per unit 100. Open - close - status ComingSoon",
+      "title": "Snow Rivers Limited IPO",
+      "details": "Snow Rivers Limited IPO for general public. Symbol SNL. Units 1875000 price per unit 100. Open - close - status ComingSoon",
       "reserved_for": [
         "general_public"
       ],
@@ -253,106 +109,8 @@
       "announcement_date": null,
       "source": "sharehub_ipo",
       "url": "https://sharehubnepal.com/investment/upcoming-public-offerings/3616-ipo-general-public-snow-rivers-limited",
-      "scraped_at_utc": "2026-06-06T02:15:15+00:00",
-      "raw_text": "Snow Rivers Limited ipo Snow Rivers Limited ipo for general public. Symbol SNL. Units 1875000 price per unit 100. Open - close - status ComingSoon"
-    },
-    {
-      "record_type": "issue",
-      "nature": "issue",
-      "issue_status": "upcoming",
-      "issue_type": "mutual fund",
-      "symbol": "GIMES2",
-      "company_name": "Global IME Samunnat Yojana -II",
-      "title": "Global IME Samunnat Yojana -II mutual fund",
-      "details": "Global IME Samunnat Yojana -II mutual fund for general public. Symbol GIMES2. Units 120000000 price per unit 10. Open - close - status ComingSoon",
-      "reserved_for": [
-        "general_public",
-        "mutual_fund"
-      ],
-      "issue_open_date": null,
-      "issue_close_date": null,
-      "min_quantity": null,
-      "max_quantity": null,
-      "total_quantity": 120000000.0,
-      "price_per_unit": 10.0,
-      "announcement_date": null,
-      "source": "sharehub_ipo",
-      "url": "https://sharehubnepal.com/investment/upcoming-public-offerings/3493-ipo-general-public-global-ime-samunnat-yojana-ii",
-      "scraped_at_utc": "2026-06-06T02:15:15+00:00",
-      "raw_text": "Global IME Samunnat Yojana -II mutual fund Global IME Samunnat Yojana -II mutual fund for general public. Symbol GIMES2. Units 120000000 price per unit 10. Open - close - status ComingSoon"
-    },
-    {
-      "record_type": "issue",
-      "nature": "issue",
-      "issue_status": "upcoming",
-      "issue_type": "debenture",
-      "symbol": "ADBLB86",
-      "company_name": "4% Agricultural Bond 2086",
-      "title": "4% Agricultural Bond 2086 debenture",
-      "details": "4% Agricultural Bond 2086 debenture for general public. Symbol ADBLB86. Units 12000000 price per unit 1000. Open - close - status ComingSoon",
-      "reserved_for": [
-        "general_public"
-      ],
-      "issue_open_date": null,
-      "issue_close_date": null,
-      "min_quantity": null,
-      "max_quantity": null,
-      "total_quantity": 12000000.0,
-      "price_per_unit": 1000.0,
-      "announcement_date": null,
-      "source": "sharehub_ipo",
-      "url": "https://sharehubnepal.com/investment/upcoming-public-offerings/2991-ipo-general-public-4-agricultural-bond-2086",
-      "scraped_at_utc": "2026-06-06T02:15:15+00:00",
-      "raw_text": "4% Agricultural Bond 2086 debenture 4% Agricultural Bond 2086 debenture for general public. Symbol ADBLB86. Units 12000000 price per unit 1000. Open - close - status ComingSoon"
-    },
-    {
-      "record_type": "issue",
-      "nature": "issue",
-      "issue_status": "upcoming",
-      "issue_type": "debenture",
-      "symbol": "9CCBL87",
-      "company_name": "9% Century Debenture 2087",
-      "title": "9% Century Debenture 2087 debenture",
-      "details": "9% Century Debenture 2087 debenture for general public. Symbol 9CCBL87. Units 2200000 price per unit 1000. Open - close - status ComingSoon",
-      "reserved_for": [
-        "general_public"
-      ],
-      "issue_open_date": null,
-      "issue_close_date": null,
-      "min_quantity": null,
-      "max_quantity": null,
-      "total_quantity": 2200000.0,
-      "price_per_unit": 1000.0,
-      "announcement_date": null,
-      "source": "sharehub_ipo",
-      "url": "https://sharehubnepal.com/investment/upcoming-public-offerings/2945-ipo-general-public-9-century-debenture-2087",
-      "scraped_at_utc": "2026-06-06T02:15:15+00:00",
-      "raw_text": "9% Century Debenture 2087 debenture 9% Century Debenture 2087 debenture for general public. Symbol 9CCBL87. Units 2200000 price per unit 1000. Open - close - status ComingSoon"
-    },
-    {
-      "record_type": "issue",
-      "nature": "issue",
-      "issue_status": "upcoming",
-      "issue_type": "mutual fund",
-      "symbol": "HLILCF",
-      "company_name": "HLI Large Cap Fund",
-      "title": "HLI Large Cap Fund mutual fund",
-      "details": "HLI Large Cap Fund mutual fund for general public. Symbol HLILCF. Units 400000000 price per unit 10. Open 2025-08-31 close - status ComingSoon",
-      "reserved_for": [
-        "general_public",
-        "mutual_fund"
-      ],
-      "issue_open_date": "2025-08-31",
-      "issue_close_date": null,
-      "min_quantity": null,
-      "max_quantity": null,
-      "total_quantity": 400000000.0,
-      "price_per_unit": 10.0,
-      "announcement_date": "2025-08-31",
-      "source": "sharehub_ipo",
-      "url": "https://sharehubnepal.com/investment/upcoming-public-offerings/3541-ipo-general-public-hli-large-cap-fund",
-      "scraped_at_utc": "2026-06-06T02:15:15+00:00",
-      "raw_text": "HLI Large Cap Fund mutual fund HLI Large Cap Fund mutual fund for general public. Symbol HLILCF. Units 400000000 price per unit 10. Open 2025-08-31 close - status ComingSoon"
+      "scraped_at_utc": "2026-06-06T06:03:40+00:00",
+      "raw_text": "Snow Rivers Limited IPO Snow Rivers Limited IPO for general public. Symbol SNL. Units 1875000 price per unit 100. Open - close - status ComingSoon"
     }
   ],
   "open": [
@@ -360,28 +118,70 @@
       "record_type": "issue",
       "nature": "issue",
       "issue_status": "open",
-      "issue_type": "ipo",
+      "issue_type": "ipo-general",
       "symbol": "ECL",
       "company_name": "Everest Colour Limited",
-      "title": "Everest Colour Limited ipo",
-      "details": "Everest Colour Limited ipo for general public. Symbol ECL. Units 655700 price per unit 100. Open 2026-06-05 close 2026-06-10 status Open",
-      "reserved_for": [
-        "general_public"
-      ],
-      "issue_open_date": "2026-06-05",
-      "issue_close_date": "2026-06-10",
+      "title": "Everest Colour Limited IPO-General",
+      "details": "IPO-General Everest Colour Limited units 655700 price per unit 100 minimum apply 10 open 2083-02-22 close 2083-02-27 status Open",
+      "reserved_for": [],
+      "issue_open_date": "2083-02-22",
+      "issue_close_date": "2083-02-27",
       "min_quantity": 10.0,
       "max_quantity": null,
       "total_quantity": 655700.0,
       "price_per_unit": 100.0,
-      "announcement_date": "2026-06-05",
-      "source": "sharehub_ipo",
-      "url": "https://sharehubnepal.com/investment/upcoming-public-offerings/3833-ipo-general-public-everest-colour-limited",
-      "scraped_at_utc": "2026-06-06T02:15:15+00:00",
-      "raw_text": "Everest Colour Limited ipo Everest Colour Limited ipo for general public. Symbol ECL. Units 655700 price per unit 100. Open 2026-06-05 close 2026-06-10 status Open"
+      "announcement_date": "2083-02-22",
+      "source": "nepselink_ipo_opening",
+      "url": "https://nepselink.com/ipo-opening",
+      "scraped_at_utc": "2026-06-06T06:03:40+00:00",
+      "raw_text": "Everest Colour Limited IPO-General IPO-General Everest Colour Limited units 655700 price per unit 100 minimum apply 10 open 2083-02-22 close 2083-02-27 status Open"
     }
   ],
   "closed": [
+    {
+      "record_type": "issue",
+      "nature": "issue",
+      "issue_status": "closed",
+      "issue_type": "ipo-general",
+      "symbol": "SGHL",
+      "company_name": "Sanigad Hydro Limited",
+      "title": "Sanigad Hydro Limited IPO-General",
+      "details": "IPO-General Sanigad Hydro Limited units 4674000 price per unit 100 minimum apply 10 open 2083-02-18 close 2083-02-21 status Closed",
+      "reserved_for": [],
+      "issue_open_date": "2083-02-18",
+      "issue_close_date": "2083-02-21",
+      "min_quantity": 10.0,
+      "max_quantity": null,
+      "total_quantity": 4674000.0,
+      "price_per_unit": 100.0,
+      "announcement_date": "2083-02-21",
+      "source": "nepselink_ipo_opening",
+      "url": "https://nepselink.com/ipo-opening",
+      "scraped_at_utc": "2026-06-06T06:03:40+00:00",
+      "raw_text": "Sanigad Hydro Limited IPO-General IPO-General Sanigad Hydro Limited units 4674000 price per unit 100 minimum apply 10 open 2083-02-18 close 2083-02-21 status Closed"
+    },
+    {
+      "record_type": "issue",
+      "nature": "issue",
+      "issue_status": "closed",
+      "issue_type": "ipo-general",
+      "symbol": "KHL",
+      "company_name": "Kalanga Hydro Limited",
+      "title": "Kalanga Hydro Limited IPO-General",
+      "details": "IPO-General Kalanga Hydro Limited units 2870000 price per unit 100 minimum apply 10 open 2083-02-08 close 2083-02-13 status Closed",
+      "reserved_for": [],
+      "issue_open_date": "2083-02-08",
+      "issue_close_date": "2083-02-13",
+      "min_quantity": 10.0,
+      "max_quantity": null,
+      "total_quantity": 2870000.0,
+      "price_per_unit": 100.0,
+      "announcement_date": "2083-02-13",
+      "source": "nepselink_ipo_opening",
+      "url": "https://nepselink.com/ipo-opening",
+      "scraped_at_utc": "2026-06-06T06:03:40+00:00",
+      "raw_text": "Kalanga Hydro Limited IPO-General IPO-General Kalanga Hydro Limited units 2870000 price per unit 100 minimum apply 10 open 2083-02-08 close 2083-02-13 status Closed"
+    },
     {
       "record_type": "issue",
       "nature": "issue",
@@ -401,7 +201,7 @@
       "announcement_date": "2083-01-28",
       "source": "nepselink_ipo_opening",
       "url": "https://nepselink.com/ipo-opening",
-      "scraped_at_utc": "2026-06-06T02:15:15+00:00",
+      "scraped_at_utc": "2026-06-06T06:03:40+00:00",
       "raw_text": "Taksar Pikhuwa Khola Hydropower Limited IPO-General IPO-General Taksar Pikhuwa Khola Hydropower Limited units 2515455 price per unit 100 minimum apply 10 open 2083-01-23 close 2083-01-28 status Closed"
     },
     {
@@ -423,7 +223,7 @@
       "announcement_date": "2083-01-22",
       "source": "nepselink_ipo_opening",
       "url": "https://nepselink.com/ipo-opening",
-      "scraped_at_utc": "2026-06-06T02:15:15+00:00",
+      "scraped_at_utc": "2026-06-06T06:03:40+00:00",
       "raw_text": "Yambaling Hydropower Limited IPO-General IPO-General Yambaling Hydropower Limited units 1743000 price per unit 100 minimum apply 10 open 2083-01-16 close 2083-01-22 status Closed"
     },
     {
@@ -445,7 +245,7 @@
       "announcement_date": "2083-01-08",
       "source": "nepselink_ipo_opening",
       "url": "https://nepselink.com/ipo-opening",
-      "scraped_at_utc": "2026-06-06T02:15:15+00:00",
+      "scraped_at_utc": "2026-06-06T06:03:40+00:00",
       "raw_text": "Sopan Pharmaceuticals Limited IPO-General IPO-General Sopan Pharmaceuticals Limited units 3474900 price per unit 100 minimum apply 10 open 2083-01-03 close 2083-01-08 status Closed"
     },
     {
@@ -467,7 +267,7 @@
       "announcement_date": "2083-01-02",
       "source": "nepselink_ipo_opening",
       "url": "https://nepselink.com/ipo-opening",
-      "scraped_at_utc": "2026-06-06T02:15:15+00:00",
+      "scraped_at_utc": "2026-06-06T06:03:40+00:00",
       "raw_text": "Snow Rivers Limited IPO-General IPO-General Snow Rivers Limited units 778125 price per unit 100 minimum apply 10 open 2083-01-29 close 2083-01-02 status Closed"
     },
     {
@@ -489,7 +289,7 @@
       "announcement_date": "2083-01-02",
       "source": "nepselink_ipo_opening",
       "url": "https://nepselink.com/ipo-opening",
-      "scraped_at_utc": "2026-06-06T02:15:15+00:00",
+      "scraped_at_utc": "2026-06-06T06:03:40+00:00",
       "raw_text": "Appolo Hydropower Limited IPO-GENERAL IPO-GENERAL Appolo Hydropower Limited units 780200 price per unit 100 minimum apply 10 open 2082-12-26 close 2083-01-02 status Closed"
     },
     {
@@ -511,81 +311,8 @@
       "announcement_date": "2082-12-25",
       "source": "nepselink_ipo_opening",
       "url": "https://nepselink.com/ipo-opening",
-      "scraped_at_utc": "2026-06-06T02:15:15+00:00",
+      "scraped_at_utc": "2026-06-06T06:03:40+00:00",
       "raw_text": "Kalinchowk Hydropower Limited IPO-General IPO-General Kalinchowk Hydropower Limited units 684750 price per unit 100 minimum apply 10 open 2082-12-22 close 2082-12-25 status Closed"
-    },
-    {
-      "record_type": "issue",
-      "nature": "issue",
-      "issue_status": "closed",
-      "issue_type": "ipo",
-      "symbol": "SGHL",
-      "company_name": "Sanigad Hydro Limited",
-      "title": "Sanigad Hydro Limited ipo",
-      "details": "Sanigad Hydro Limited ipo for general public. Symbol SGHL. Units 4674000 price per unit 100. Open 2026-06-01 close 2026-06-04 status Closed",
-      "reserved_for": [
-        "general_public"
-      ],
-      "issue_open_date": "2026-06-01",
-      "issue_close_date": "2026-06-04",
-      "min_quantity": 10.0,
-      "max_quantity": null,
-      "total_quantity": 4674000.0,
-      "price_per_unit": 100.0,
-      "announcement_date": "2026-06-04",
-      "source": "sharehub_ipo",
-      "url": "https://sharehubnepal.com/investment/upcoming-public-offerings/3648-ipo-general-public-sanigad-hydro-limited",
-      "scraped_at_utc": "2026-06-06T02:15:15+00:00",
-      "raw_text": "Sanigad Hydro Limited ipo Sanigad Hydro Limited ipo for general public. Symbol SGHL. Units 4674000 price per unit 100. Open 2026-06-01 close 2026-06-04 status Closed"
-    },
-    {
-      "record_type": "issue",
-      "nature": "issue",
-      "issue_status": "closed",
-      "issue_type": "ipo",
-      "symbol": "KHL",
-      "company_name": "Kalanga Hydro Limited",
-      "title": "Kalanga Hydro Limited ipo",
-      "details": "Kalanga Hydro Limited ipo for general public. Symbol KHL. Units 2870000 price per unit 100. Open 2026-05-22 close 2026-05-27 status Closed",
-      "reserved_for": [
-        "general_public"
-      ],
-      "issue_open_date": "2026-05-22",
-      "issue_close_date": "2026-05-27",
-      "min_quantity": 10.0,
-      "max_quantity": null,
-      "total_quantity": 2870000.0,
-      "price_per_unit": 100.0,
-      "announcement_date": "2026-05-27",
-      "source": "sharehub_ipo",
-      "url": "https://sharehubnepal.com/investment/upcoming-public-offerings/3647-ipo-general-public-kalanga-hydro-limited",
-      "scraped_at_utc": "2026-06-06T02:15:15+00:00",
-      "raw_text": "Kalanga Hydro Limited ipo Kalanga Hydro Limited ipo for general public. Symbol KHL. Units 2870000 price per unit 100. Open 2026-05-22 close 2026-05-27 status Closed"
-    },
-    {
-      "record_type": "issue",
-      "nature": "issue",
-      "issue_status": "closed",
-      "issue_type": "mutual fund",
-      "symbol": "RSY2",
-      "company_name": "Reliable Samriddhi Yojana-2",
-      "title": "Reliable Samriddhi Yojana-2 mutual fund",
-      "details": "Reliable Samriddhi Yojana-2 mutual fund for general public. Symbol RSY2. Units 100000000 price per unit 10. Open 2026-05-12 close 2026-05-22 status Closed",
-      "reserved_for": [
-        "general_public",
-        "mutual_fund"
-      ],
-      "issue_open_date": "2026-05-12",
-      "issue_close_date": "2026-05-22",
-      "min_quantity": null,
-      "max_quantity": null,
-      "total_quantity": 100000000.0,
-      "price_per_unit": 10.0,
-      "announcement_date": "2026-05-22",
-      "source": "sharehub_ipo",
-      "url": "https://sharehubnepal.com/investment/upcoming-public-offerings/3830-ipo-general-public-reliable-samriddhi-yojana-2",
-      "scraped_at_utc": "2026-06-06T02:15:15+00:00",
-      "raw_text": "Reliable Samriddhi Yojana-2 mutual fund Reliable Samriddhi Yojana-2 mutual fund for general public. Symbol RSY2. Units 100000000 price per unit 10. Open 2026-05-12 close 2026-05-22 status Closed"
     }
   ],
   "results": [
@@ -610,7 +337,7 @@
       "announcement_date": "Jun 04, 2026",
       "source": "merolagani_announcements",
       "url": "https://merolagani.com/AnnouncementDetail.aspx?id=65990",
-      "scraped_at_utc": "2026-06-06T02:15:15+00:00",
+      "scraped_at_utc": "2026-06-06T06:03:40+00:00",
       "raw_text": "Mount Everest Power Development Limited has distributed its 8,60,000.00 units of IPO shares to the project affected local residents of Solukhumbu District, Solu Dudhkunda Municipality Ward No. 01 & 02 and other Wards of affected areas on Jestha 20, 2083 and the refund process for non-allottee's begins from Jestha 25, 2083 Mount Everest Power Development Limited has distributed its 8,60,000.00 units of IPO shares to the project affected local residents of Solukhumbu District, Solu Dudhkunda Municipality Ward No. 01 & 02 and other Wards of affected areas on Jestha 20, 2083 and the refund process for non-allottee's begins from Jestha 25, 2083"
     },
     {
@@ -632,7 +359,7 @@
       "announcement_date": "Jun 04, 2026",
       "source": "merolagani_announcements",
       "url": "https://merolagani.com/AnnouncementDetail.aspx?id=65989",
-      "scraped_at_utc": "2026-06-06T02:15:15+00:00",
+      "scraped_at_utc": "2026-06-06T06:03:40+00:00",
       "raw_text": "United Ajod Insurance Limited has distributed its 100:10 ratio right share (23,10,000.00 units @ Rs.100.00 per unit) to its shareholders on Jestha 19, 2083 United Ajod Insurance Limited has distributed its 100:10 ratio right share (23,10,000.00 units @ Rs.100.00 per unit) to its shareholders on Jestha 19, 2083"
     },
     {
@@ -654,7 +381,7 @@
       "announcement_date": "Jun 03, 2026",
       "source": "merolagani_announcements",
       "url": "https://merolagani.com/AnnouncementDetail.aspx?id=65981",
-      "scraped_at_utc": "2026-06-06T02:15:15+00:00",
+      "scraped_at_utc": "2026-06-06T06:03:40+00:00",
       "raw_text": "Himalayan Power Partner Limited has distributed its 1:0.5 ratio right share (53,27,085.00 units @ Rs.100.00 per unit) to its shareholders on Jestha 19, 2083 and the refund process for non-allottee's begins from Jestha 21, 2083 Himalayan Power Partner Limited has distributed its 1:0.5 ratio right share (53,27,085.00 units @ Rs.100.00 per unit) to its shareholders on Jestha 19, 2083 and the refund process for non-allottee's begins from Jestha 21, 2083"
     }
   ],
