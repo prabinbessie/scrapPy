@@ -74,6 +74,26 @@ def _canonical_issue_type(value: Any) -> str:
     return raw
 
 
+_NON_GENERAL_RESERVED: frozenset[str] = frozenset(
+    {"foreign_employment", "local_residents", "employees", "mutual_fund"}
+)
+
+
+def _is_general_public_ipo(record: dict[str, Any]) -> bool:
+    """Keep only IPOs offered to the general public.
+
+    Drops debentures, mutual funds, right shares and FPOs, plus IPO tranches
+    reserved for locals, employees or foreign employment. An IPO with no detected
+    audience is kept, since the default offering is to the general public.
+    """
+    if _canonical_issue_type(record.get("issue_type")) != "ipo":
+        return False
+    reserved = set(record.get("reserved_for") or [])
+    if "general_public" in reserved:
+        return True
+    return not (reserved & _NON_GENERAL_RESERVED)
+
+
 def _candidate_keys(item: dict[str, Any]) -> list[str]:
     company = str(item.get("company_name") or "").strip().lower()
     issue_type = _canonical_issue_type(item.get("issue_type"))
@@ -271,7 +291,7 @@ def scrape_ipo_to_json() -> dict[str, Any]:
     disclosures_raw = source_bundle.get("nepse_disclosure_sources", [])
     nepselink_raw = source_bundle.get("nepselink_sources", [])
 
-    combined_issues_raw = sharehub_raw + upcoming_raw + disclosures_raw
+    combined_issues_raw = upcoming_raw + disclosures_raw + sharehub_raw
 
     classified_issues = _classify_entries(combined_issues_raw, "issue")
     classified_results = _classify_entries(results_raw, "result")
@@ -282,7 +302,7 @@ def scrape_ipo_to_json() -> dict[str, Any]:
     all_issues = classified_issues + extra_issues
     all_results = classified_results + extra_results
 
-    deduped_issues = _deduplicate(all_issues)
+    deduped_issues = [r for r in _deduplicate(all_issues) if _is_general_public_ipo(r)]
     deduped_results = _deduplicate(all_results)
 
     grouped_issues = _group_by_status(deduped_issues)

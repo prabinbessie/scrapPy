@@ -112,7 +112,7 @@ def test_parse_nepselink_ipo_opening_page() -> None:
     assert rows[1]["announcement_date"] == "2082-11-22"
 
 
-def test_parse_sharehub_ipo_page() -> None:
+def test_parse_sharehub_ipo_page_keeps_only_general_public_ipos() -> None:
     html = _build_sharehub_html(
         [
             {
@@ -130,18 +130,21 @@ def test_parse_sharehub_ipo_page() -> None:
             },
             {
                 "id": 3837,
-                "slug": "3837-bond-nabil-debenture",
                 "symbol": "NABIL8",
                 "name": "8% Nabil Perpetual Non cumulative Preference Share",
-                "units": 5000000,
-                "price": 100,
-                "openingDate": None,
-                "closingDate": None,
                 "type": "BondOrDebenture",
                 "for": "GeneralPublic",
                 "status": "Closed",
             },
-            {"id": 1, "slug": "x", "name": "", "type": "Ipo"},  # skipped: no name
+            {
+                "id": 3838,
+                "symbol": "LOCALCO",
+                "name": "Local Tranche Hydropower Limited",
+                "type": "Ipo",
+                "for": "Local",
+                "status": "ComingSoon",
+            },
+            {"id": 1, "name": "", "type": "Ipo", "for": "GeneralPublic"},
         ]
     )
 
@@ -149,8 +152,7 @@ def test_parse_sharehub_ipo_page() -> None:
         html, "https://sharehubnepal.com/investment/upcoming-public-offerings"
     )
 
-    assert len(rows) == 2
-
+    assert len(rows) == 1
     ipo = rows[0]
     assert ipo["source"] == "sharehub_ipo"
     assert ipo["symbol"] == "MEPDL"
@@ -162,10 +164,6 @@ def test_parse_sharehub_ipo_page() -> None:
     assert ipo["price_per_unit"] == 100.0
     assert ipo["issue_status"] == "upcoming"
     assert ipo["url"].endswith("/3832-ipo-general-public-mount-everest-power-development-limited")
-
-    debenture = rows[1]
-    assert debenture["issue_type"] == "debenture"
-    assert debenture["issue_status"] == "closed"
 
 
 def test_parse_sharehub_ipo_page_without_payload_returns_empty() -> None:

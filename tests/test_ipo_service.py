@@ -3,6 +3,49 @@ from pathlib import Path
 from scraper.ipo import service
 
 
+def test_scrape_ipo_to_json_keeps_only_general_public_ipos(monkeypatch, tmp_path: Path) -> None:
+    fake_bundle = {
+        "upcoming_sources": [
+            {
+                "title": "Alpha Hydropower Limited is going to issue its IPO to the general public starting from 2099-01-01 to 2099-01-05",
+                "details": "general public issue",
+                "url": "https://merolagani.com/a",
+                "source": "merolagani_upcoming",
+            },
+            {
+                "title": "Beta Bank Debenture opens from 2099-01-01 to 2099-01-05",
+                "details": "8% debenture for general public",
+                "url": "https://merolagani.com/b",
+                "source": "merolagani_upcoming",
+            },
+            {
+                "title": "Gamma Power Limited Right Share opens from 2099-01-01 to 2099-01-05",
+                "details": "right share issue",
+                "url": "https://merolagani.com/c",
+                "source": "merolagani_upcoming",
+            },
+            {
+                "title": "Delta Hydro Limited is going to issue its IPO to the Nepalese citizens working abroad starting from 2099-01-01 to 2099-01-05",
+                "details": "foreign employment tranche",
+                "url": "https://merolagani.com/d",
+                "source": "merolagani_upcoming",
+            },
+        ],
+        "result_sources": [],
+        "nepse_disclosure_sources": [],
+        "nepselink_sources": [],
+    }
+
+    monkeypatch.setattr(service, "fetch_all_ipo_source_records", lambda client=None: fake_bundle)
+    monkeypatch.setattr(service, "IPO_FEED_JSON", tmp_path / "ipo_feed.json")
+
+    payload = service.scrape_ipo_to_json()
+
+    kept = [r for group in ("upcoming", "open", "closed", "unknown") for r in payload[group]]
+    companies = {r["company_name"] for r in kept}
+    assert companies == {"Alpha Hydropower Limited"}
+
+
 def test_scrape_ipo_to_json_groups(monkeypatch, tmp_path: Path) -> None:
     fake_bundle = {
         "upcoming_sources": [
@@ -25,8 +68,8 @@ def test_scrape_ipo_to_json_groups(monkeypatch, tmp_path: Path) -> None:
         ],
         "nepse_disclosure_sources": [
             {
-                "title": "NMB Debenture opens from 2020-01-01 to 2020-01-05",
-                "details": "Debenture issue",
+                "title": "Sunrise Hydropower Limited IPO opens from 2020-01-01 to 2020-01-05",
+                "details": "IPO issue for general public",
                 "announcement_date": "2020-01-01",
                 "url": "https://www.nepalstock.com.np/api/nots/security/fetchFiles?fileLocation=/media/notice.pdf",
                 "source": "nepse_exchange_message",
@@ -78,16 +121,25 @@ def test_scrape_ipo_to_json_groups(monkeypatch, tmp_path: Path) -> None:
     assert (tmp_path / "ipo_feed.json").exists()
 
 
-def test_scrape_ipo_to_json_sharehub_wins_dedup(monkeypatch, tmp_path: Path) -> None:
+def test_scrape_ipo_to_json_sharehub_supplements_primary(monkeypatch, tmp_path: Path) -> None:
     mero_text = (
         "Mount Everest Power Development Limited is going to issue its 14,27,600.00 "
         "units of IPO shares to the general public starting from 3rd - 8th Ashad, 2083"
     )
     fake_bundle = {
+        "upcoming_sources": [
+            {
+                "title": mero_text,
+                "details": mero_text,
+                "announcement_date": "Jun 04, 2026",
+                "url": "https://merolagani.com/AnnouncementDetail.aspx?id=65992",
+                "source": "merolagani_upcoming",
+            }
+        ],
         "sharehub_sources": [
             {
-                "title": "Mount Everest Power Development Limited ipo",
-                "details": "Mount Everest Power Development Limited ipo for general public. Units 1427600 price per unit 100.",
+                "title": "Mount Everest Power Development Limited IPO",
+                "details": "Mount Everest Power Development Limited IPO for general public. Units 1427600 price per unit 100.",
                 "announcement_date": "2026-06-17",
                 "url": "https://sharehubnepal.com/investment/upcoming-public-offerings/3832",
                 "source": "sharehub_ipo",
@@ -101,15 +153,6 @@ def test_scrape_ipo_to_json_sharehub_wins_dedup(monkeypatch, tmp_path: Path) -> 
                 "issue_status": "upcoming",
             }
         ],
-        "upcoming_sources": [
-            {
-                "title": mero_text,
-                "details": mero_text,
-                "announcement_date": "Jun 04, 2026",
-                "url": "https://merolagani.com/AnnouncementDetail.aspx?id=65992",
-                "source": "merolagani_upcoming",
-            }
-        ],
         "result_sources": [],
         "nepse_disclosure_sources": [],
         "nepselink_sources": [],
@@ -121,12 +164,12 @@ def test_scrape_ipo_to_json_sharehub_wins_dedup(monkeypatch, tmp_path: Path) -> 
     payload = service.scrape_ipo_to_json()
 
     assert payload["meta"]["upcoming_count"] == 1
-    assert payload["meta"]["sources"]["sharehub_ipo"] == 1
     winner = payload["upcoming"][0]
-    assert winner["source"] == "sharehub_ipo"
+    # merolagani stays the primary record; sharehub does not override it...
+    assert winner["source"] == "merolagani_upcoming"
+    assert winner["issue_open_date"] == "2083-03-03"
+    # ...but it fills in fields merolagani lacks.
     assert winner["symbol"] == "MEPDL"
-    assert winner["issue_open_date"] == "2026-06-17"
-    assert winner["issue_close_date"] == "2026-06-22"
     assert winner["price_per_unit"] == 100.0
 
 

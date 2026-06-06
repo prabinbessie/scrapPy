@@ -2,7 +2,6 @@ from __future__ import annotations
 
 import json
 import logging
-import re
 import time
 from concurrent.futures import ThreadPoolExecutor
 from collections.abc import Callable
@@ -298,37 +297,11 @@ def parse_nepselink_ipo_opening_page(html: str, source_url: str) -> list[dict[st
     return records
 
 
-SHAREHUB_TYPE_LABELS: dict[str, str] = {
-    "ipo": "ipo",
-    "fpo": "fpo",
-    "debenture": "debenture",
-    "bondordebenture": "debenture",
-    "mutualfund": "mutual fund",
-    "right": "right share",
-    "rightshare": "right share",
-}
-
-SHAREHUB_RESERVED_LABELS: dict[str, str] = {
-    "generalpublic": "general public",
-    "local": "local residents",
-    "localresidents": "local residents",
-    "foreignemployment": "foreign employment",
-    "migrantworkers": "foreign employment",
-    "staff": "employees",
-    "employee": "employees",
-    "employees": "employees",
-}
-
 _SHAREHUB_PUSH_MARKER = "self.__next_f.push([1,"
-_CAMEL_BOUNDARY = re.compile(r"(?<=[a-z0-9])(?=[A-Z])")
 
 
 def _normalize_ws(value: Any) -> str:
     return " ".join(str(value or "").split()).strip()
-
-
-def _humanize_label(value: str) -> str:
-    return _CAMEL_BOUNDARY.sub(" ", value).replace("_", " ").strip().lower()
 
 
 def _coerce_float(value: Any) -> float | None:
@@ -389,18 +362,15 @@ def parse_sharehub_ipo_page(html: str, source_url: str) -> list[dict[str, Any]]:
     records: list[dict[str, Any]] = []
 
     for item in _extract_sharehub_offerings(html):
+        # Only general public IPOs skip debentures, mutual funds etccc
+        if str(item.get("type") or "").strip().lower() != "ipo":
+            continue
+        if str(item.get("for") or "").strip().lower() != "generalpublic":
+            continue
+
         company_name = _normalize_ws(item.get("name"))
         if not company_name:
             continue
-
-        raw_type = str(item.get("type") or "").strip().lower()
-        issue_type = SHAREHUB_TYPE_LABELS.get(raw_type) or _humanize_label(
-            str(item.get("type") or "")
-        )
-
-        reserved_label = SHAREHUB_RESERVED_LABELS.get(
-            str(item.get("for") or "").strip().lower()
-        ) or _humanize_label(str(item.get("for") or ""))
 
         open_date = _iso_date(item.get("openingDate"))
         close_date = _iso_date(item.get("closingDate"))
@@ -417,23 +387,21 @@ def parse_sharehub_ipo_page(html: str, source_url: str) -> list[dict[str, Any]]:
         symbol = _normalize_ws(item.get("symbol"))
 
         details = (
-            f"{company_name} {issue_type} for {reserved_label}. "
-            f"Symbol {symbol or '-'}. Units {item.get('units')} "
-            f"price per unit {item.get('price')}. "
-            f"Open {open_date or '-'} close {close_date or '-'} "
-            f"status {item.get('status')}"
+            f"{company_name} IPO for general public. Symbol {symbol or '-'}. "
+            f"Units {item.get('units')} price per unit {item.get('price')}. "
+            f"Open {open_date or '-'} close {close_date or '-'} status {item.get('status')}"
         )
 
         records.append(
             {
-                "title": f"{company_name} {issue_type}".strip(),
+                "title": f"{company_name} IPO",
                 "details": details,
                 "announcement_date": announcement_date,
                 "url": url,
                 "source": "sharehub_ipo",
                 "symbol": symbol,
                 "company": company_name,
-                "issue_type": issue_type,
+                "issue_type": "ipo",
                 "issue_open_date": open_date,
                 "issue_close_date": close_date,
                 "total_quantity": total_quantity,
