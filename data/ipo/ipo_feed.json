@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at_utc": "2026-06-12T02:42:33+00:00",
+    "generated_at_utc": "2026-06-12T09:57:50+00:00",
     "sources": {
       "sharehub_ipo": 7,
       "merolagani_upcoming": 1,
@@ -37,7 +37,7 @@
       "announcement_date": "Jun 04, 2026",
       "source": "merolagani_upcoming",
       "url": "https://merolagani.com/AnnouncementDetail.aspx?id=65992",
-      "scraped_at_utc": "2026-06-12T02:42:33+00:00",
+      "scraped_at_utc": "2026-06-12T09:57:50+00:00",
       "raw_text": "Mount Everest Power Development Limited is going to issue its 14,27,600.00 units of IPO shares to the general public starting from 3rd - 8th Ashad, 2083 Mount Everest Power Development Limited is going to issue its 14,27,600.00 units of IPO shares to the general public starting from 3rd - 8th Ashad, 2083"
     },
     {
@@ -61,7 +61,7 @@
       "announcement_date": null,
       "source": "sharehub_ipo",
       "url": "https://sharehubnepal.com/investment/upcoming-public-offerings/3831-ipo-general-public-beni-hydropower-project-limited",
-      "scraped_at_utc": "2026-06-12T02:42:33+00:00",
+      "scraped_at_utc": "2026-06-12T09:57:50+00:00",
       "raw_text": "Beni Hydropower Project Limited IPO Beni Hydropower Project Limited IPO for general public. Symbol BENI. Units 2080000 price per unit 100. Open - close - status ComingSoon"
     },
     {
@@ -85,7 +85,7 @@
       "announcement_date": null,
       "source": "sharehub_ipo",
       "url": "https://sharehubnepal.com/investment/upcoming-public-offerings/3616-ipo-general-public-snow-rivers-limited",
-      "scraped_at_utc": "2026-06-12T02:42:33+00:00",
+      "scraped_at_utc": "2026-06-12T09:57:50+00:00",
       "raw_text": "Snow Rivers Limited IPO Snow Rivers Limited IPO for general public. Symbol SNL. Units 1875000 price per unit 100. Open - close - status ComingSoon"
     }
   ],
@@ -109,7 +109,7 @@
       "announcement_date": "2083-02-28",
       "source": "nepselink_ipo_opening",
       "url": "https://nepselink.com/ipo-opening",
-      "scraped_at_utc": "2026-06-12T02:42:33+00:00",
+      "scraped_at_utc": "2026-06-12T09:57:50+00:00",
       "raw_text": "Sarvottam Paints Industries Limited IPO-General IPO-General Sarvottam Paints Industries Limited units 705500 price per unit 100 minimum apply 10 open 2083-02-28 close 2083-03-02 status Open"
     }
   ],
@@ -133,7 +133,7 @@
       "announcement_date": "2083-02-27",
       "source": "nepselink_ipo_opening",
       "url": "https://nepselink.com/ipo-opening",
-      "scraped_at_utc": "2026-06-12T02:42:33+00:00",
+      "scraped_at_utc": "2026-06-12T09:57:50+00:00",
       "raw_text": "Everest Colour Limited IPO-General IPO-General Everest Colour Limited units 655700 price per unit 100 minimum apply 10 open 2083-02-22 close 2083-02-27 status Closed"
     },
     {
@@ -155,7 +155,7 @@
       "announcement_date": "2083-02-21",
       "source": "nepselink_ipo_opening",
       "url": "https://nepselink.com/ipo-opening",
-      "scraped_at_utc": "2026-06-12T02:42:33+00:00",
+      "scraped_at_utc": "2026-06-12T09:57:50+00:00",
       "raw_text": "Sanigad Hydro Limited IPO-General IPO-General Sanigad Hydro Limited units 4674000 price per unit 100 minimum apply 10 open 2083-02-18 close 2083-02-21 status Closed"
     },
     {
@@ -177,7 +177,7 @@
       "announcement_date": "2083-02-13",
       "source": "nepselink_ipo_opening",
       "url": "https://nepselink.com/ipo-opening",
-      "scraped_at_utc": "2026-06-12T02:42:33+00:00",
+      "scraped_at_utc": "2026-06-12T09:57:50+00:00",
       "raw_text": "Kalanga Hydro Limited IPO-General IPO-General Kalanga Hydro Limited units 2870000 price per unit 100 minimum apply 10 open 2083-02-08 close 2083-02-13 status Closed"
     },
     {
@@ -199,7 +199,7 @@
       "announcement_date": "2083-01-28",
       "source": "nepselink_ipo_opening",
       "url": "https://nepselink.com/ipo-opening",
-      "scraped_at_utc": "2026-06-12T02:42:33+00:00",
+      "scraped_at_utc": "2026-06-12T09:57:50+00:00",
       "raw_text": "Taksar Pikhuwa Khola Hydropower Limited IPO-General IPO-General Taksar Pikhuwa Khola Hydropower Limited units 2515455 price per unit 100 minimum apply 10 open 2083-01-23 close 2083-01-28 status Closed"
     },
     {
@@ -221,7 +221,7 @@
       "announcement_date": "2083-01-22",
       "source": "nepselink_ipo_opening",
       "url": "https://nepselink.com/ipo-opening",
-      "scraped_at_utc": "2026-06-12T02:42:33+00:00",
+      "scraped_at_utc": "2026-06-12T09:57:50+00:00",
       "raw_text": "Yambaling Hydropower Limited IPO-General IPO-General Yambaling Hydropower Limited units 1743000 price per unit 100 minimum apply 10 open 2083-01-16 close 2083-01-22 status Closed"
     },
     {
@@ -243,7 +243,7 @@
       "announcement_date": "2083-01-08",
       "source": "nepselink_ipo_opening",
       "url": "https://nepselink.com/ipo-opening",
-      "scraped_at_utc": "2026-06-12T02:42:33+00:00",
+      "scraped_at_utc": "2026-06-12T09:57:50+00:00",
       "raw_text": "Sopan Pharmaceuticals Limited IPO-General IPO-General Sopan Pharmaceuticals Limited units 3474900 price per unit 100 minimum apply 10 open 2083-01-03 close 2083-01-08 status Closed"
     },
     {
@@ -265,7 +265,7 @@
       "announcement_date": "2083-01-02",
       "source": "nepselink_ipo_opening",
       "url": "https://nepselink.com/ipo-opening",
-      "scraped_at_utc": "2026-06-12T02:42:33+00:00",
+      "scraped_at_utc": "2026-06-12T09:57:50+00:00",
       "raw_text": "Snow Rivers Limited IPO-General IPO-General Snow Rivers Limited units 778125 price per unit 100 minimum apply 10 open 2083-01-29 close 2083-01-02 status Closed"
     },
     {
@@ -287,7 +287,7 @@
       "announcement_date": "2083-01-02",
       "source": "nepselink_ipo_opening",
       "url": "https://nepselink.com/ipo-opening",
-      "scraped_at_utc": "2026-06-12T02:42:33+00:00",
+      "scraped_at_utc": "2026-06-12T09:57:50+00:00",
       "raw_text": "Appolo Hydropower Limited IPO-GENERAL IPO-GENERAL Appolo Hydropower Limited units 780200 price per unit 100 minimum apply 10 open 2082-12-26 close 2083-01-02 status Closed"
     }
   ],
@@ -313,7 +313,7 @@
       "announcement_date": "Jun 11, 2026",
       "source": "merolagani_announcements",
       "url": "https://merolagani.com/AnnouncementDetail.aspx?id=66038",
-      "scraped_at_utc": "2026-06-12T02:42:33+00:00",
+      "scraped_at_utc": "2026-06-12T09:57:50+00:00",
       "raw_text": "Kalanga Hydro Limited has distributed its 28,70,000.00 units of IPO shares to the general public on Jestha 27, 2083 and has requested all the member of C-ASBA bank/financial Institutions to release the payment to the non-allottee's bank account. Kalanga Hydro Limited has distributed its 28,70,000.00 units of IPO shares to the general public on Jestha 27, 2083 and has requested all the member of C-ASBA bank/financial Institutions to release the payment to the non-allottee's bank account."
     }
   ],
