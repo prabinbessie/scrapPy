@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at_utc": "2026-06-30T02:33:39+00:00",
+    "generated_at_utc": "2026-06-30T08:57:53+00:00",
     "sources": {
       "sharehub_ipo": 6,
       "merolagani_upcoming": 0,
@@ -39,7 +39,7 @@
       "announcement_date": null,
       "source": "sharehub_ipo",
       "url": "https://sharehubnepal.com/investment/upcoming-public-offerings/3831-ipo-general-public-beni-hydropower-project-limited",
-      "scraped_at_utc": "2026-06-30T02:33:39+00:00",
+      "scraped_at_utc": "2026-06-30T08:57:53+00:00",
       "raw_text": "Beni Hydropower Project Limited IPO Beni Hydropower Project Limited IPO for general public. Symbol BENI. Units 2080000 price per unit 100. Open - close - status ComingSoon"
     }
   ],
@@ -182,7 +182,7 @@
       "announcement_date": "2026-06-22",
       "source": "sharehub_ipo",
       "url": "https://sharehubnepal.com/investment/upcoming-public-offerings/3832-ipo-general-public-mount-everest-power-development-limited",
-      "scraped_at_utc": "2026-06-30T02:33:39+00:00",
+      "scraped_at_utc": "2026-06-30T08:57:53+00:00",
       "raw_text": "Mount Everest Power Development Limited IPO Mount Everest Power Development Limited IPO for general public. Symbol MEPDL. Units 1427600 price per unit 100. Open 2026-06-17 close 2026-06-22 status Closed"
     },
     {
@@ -206,7 +206,7 @@
       "announcement_date": "2026-06-16",
       "source": "sharehub_ipo",
       "url": "https://sharehubnepal.com/investment/upcoming-public-offerings/3834-ipo-general-public-sarvottam-paints-industries-limited",
-      "scraped_at_utc": "2026-06-30T02:33:39+00:00",
+      "scraped_at_utc": "2026-06-30T08:57:53+00:00",
       "raw_text": "Sarvottam Paints Industries Limited IPO Sarvottam Paints Industries Limited IPO for general public. Symbol SARVOTTAM. Units 705500 price per unit 100. Open 2026-06-11 close 2026-06-16 status Closed"
     },
     {
@@ -230,7 +230,7 @@
       "announcement_date": "2026-06-10",
       "source": "sharehub_ipo",
       "url": "https://sharehubnepal.com/investment/upcoming-public-offerings/3833-ipo-general-public-everest-colour-limited",
-      "scraped_at_utc": "2026-06-30T02:33:39+00:00",
+      "scraped_at_utc": "2026-06-30T08:57:53+00:00",
       "raw_text": "Everest Colour Limited IPO Everest Colour Limited IPO for general public. Symbol ECL. Units 655700 price per unit 100. Open 2026-06-05 close 2026-06-10 status Closed"
     },
     {
@@ -254,7 +254,7 @@
       "announcement_date": "2026-06-04",
       "source": "sharehub_ipo",
       "url": "https://sharehubnepal.com/investment/upcoming-public-offerings/3648-ipo-general-public-sanigad-hydro-limited",
-      "scraped_at_utc": "2026-06-30T02:33:39+00:00",
+      "scraped_at_utc": "2026-06-30T08:57:53+00:00",
       "raw_text": "Sanigad Hydro Limited IPO Sanigad Hydro Limited IPO for general public. Symbol SGHL. Units 4674000 price per unit 100. Open 2026-06-01 close 2026-06-04 status Closed"
     },
     {
@@ -278,7 +278,7 @@
       "announcement_date": "2026-05-27",
       "source": "sharehub_ipo",
       "url": "https://sharehubnepal.com/investment/upcoming-public-offerings/3647-ipo-general-public-kalanga-hydro-limited",
-      "scraped_at_utc": "2026-06-30T02:33:39+00:00",
+      "scraped_at_utc": "2026-06-30T08:57:53+00:00",
       "raw_text": "Kalanga Hydro Limited IPO Kalanga Hydro Limited IPO for general public. Symbol KHL. Units 2870000 price per unit 100. Open 2026-05-22 close 2026-05-27 status Closed"
     }
   ],
@@ -302,7 +302,7 @@
       "announcement_date": "Jun 27, 2026",
       "source": "merolagani_announcements",
       "url": "https://merolagani.com/AnnouncementDetail.aspx?id=66250",
-      "scraped_at_utc": "2026-06-30T02:33:39+00:00",
+      "scraped_at_utc": "2026-06-30T08:57:53+00:00",
       "raw_text": "Himalayan Power Partner Limited has distributed its 4,68,740.00 units of unsold ordinary right shares to the interested whoever person, institutions or company on Ashad 10, 2083 and has started the refund process directly to the non-allottee's bank account along with the distribution final cut-off price is as Rs.345.1 Himalayan Power Partner Limited has distributed its 4,68,740.00 units of unsold ordinary right shares to the interested whoever person, institutions or company on Ashad 10, 2083 and has started the refund process directly to the non-allottee's bank account along with the distribution final cut-off price is as Rs.345.1"
     },
     {
@@ -326,7 +326,7 @@
       "announcement_date": "Jun 26, 2026",
       "source": "merolagani_announcements",
       "url": "https://merolagani.com/AnnouncementDetail.aspx?id=66246",
-      "scraped_at_utc": "2026-06-30T02:33:39+00:00",
+      "scraped_at_utc": "2026-06-30T08:57:53+00:00",
       "raw_text": "Sarvottam Paints Industries Limited has distributed its 7,05,500.00 units of IPO shares to the general public on Ashad 11, 2083 Sarvottam Paints Industries Limited has distributed its 7,05,500.00 units of IPO shares to the general public on Ashad 11, 2083"
     }
   ],
