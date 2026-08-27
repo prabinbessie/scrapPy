@@ -1,3 +1,4 @@
 scraped_at_utc,scraped_at_npt,npt_date,npt_time,scraped_epoch,weekday,hour_utc,hour_npt,is_market_open,as_of_date,total_turnover,total_traded_shares,total_transactions,total_trades,total_market_cap,floated_market_cap,nepse_index,nepse_point_change,nepse_percentage_change
 2026-08-27T05:15:27+00:00,2026-08-27T11:00:27+05:45,2026-08-27,11:00:27,1787807727,3,5,11,OPEN,,,,,,,,,,
 2026-08-27T05:45:28+00:00,2026-08-27T11:30:28+05:45,2026-08-27,11:30:28,1787809528,3,5,11,OPEN,,,,,,,,,,
+2026-08-27T06:15:33+00:00,2026-08-27T12:00:33+05:45,2026-08-27,12:00:33,1787811333,3,6,12,OPEN,,,,,,,,,,
