@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at_utc": "2026-08-29T20:11:54+00:00",
+    "generated_at_utc": "2026-08-30T02:36:32+00:00",
     "sources": {
       "sharehub_ipo": 5,
       "merolagani_upcoming": 1,
@@ -40,7 +40,7 @@
       "announcement_date": "Aug 25, 2026",
       "source": "merolagani_upcoming",
       "url": "https://merolagani.com/AnnouncementDetail.aspx?id=67124",
-      "scraped_at_utc": "2026-08-29T20:11:54+00:00",
+      "scraped_at_utc": "2026-08-30T02:36:32+00:00",
       "raw_text": "Beni Hydropower Project Limited is going to issue its 8,63,200.00 units of IPO shares to the general public starting from 22nd - 25th Bhadra, 2083 Beni Hydropower Project Limited is going to issue its 8,63,200.00 units of IPO shares to the general public starting from 22nd - 25th Bhadra, 2083"
     }
   ],
@@ -199,14 +199,14 @@
       ],
       "issue_open_date": "2026-06-17",
       "issue_close_date": "2026-06-22",
-      "min_quantity": 10.0,
+      "min_quantity": null,
       "max_quantity": null,
       "total_quantity": 1427600.0,
       "price_per_unit": 100.0,
       "announcement_date": "2026-06-22",
       "source": "sharehub_ipo",
       "url": "https://sharehubnepal.com/investment/upcoming-public-offerings/3832-ipo-general-public-mount-everest-power-development-limited",
-      "scraped_at_utc": "2026-08-29T20:11:54+00:00",
+      "scraped_at_utc": "2026-08-30T02:36:32+00:00",
       "raw_text": "Mount Everest Power Development Limited IPO Mount Everest Power Development Limited IPO for general public. Symbol MEPDL. Units 1427600 price per unit 100. Open 2026-06-17 close 2026-06-22 status Closed"
     },
     {
@@ -223,14 +223,14 @@
       ],
       "issue_open_date": "2026-06-11",
       "issue_close_date": "2026-06-16",
-      "min_quantity": 10.0,
+      "min_quantity": null,
       "max_quantity": null,
       "total_quantity": 705500.0,
       "price_per_unit": 100.0,
       "announcement_date": "2026-06-16",
       "source": "sharehub_ipo",
       "url": "https://sharehubnepal.com/investment/upcoming-public-offerings/3834-ipo-general-public-sarvottam-paints-industries-limited",
-      "scraped_at_utc": "2026-08-29T20:11:54+00:00",
+      "scraped_at_utc": "2026-08-30T02:36:32+00:00",
       "raw_text": "Sarvottam Paints Industries Limited IPO Sarvottam Paints Industries Limited IPO for general public. Symbol SAPIL. Units 705500 price per unit 100. Open 2026-06-11 close 2026-06-16 status Closed"
     },
     {
@@ -247,14 +247,14 @@
       ],
       "issue_open_date": "2026-06-05",
       "issue_close_date": "2026-06-10",
-      "min_quantity": 10.0,
+      "min_quantity": null,
       "max_quantity": null,
       "total_quantity": 655700.0,
       "price_per_unit": 100.0,
       "announcement_date": "2026-06-10",
       "source": "sharehub_ipo",
       "url": "https://sharehubnepal.com/investment/upcoming-public-offerings/3833-ipo-general-public-everest-colour-limited",
-      "scraped_at_utc": "2026-08-29T20:11:54+00:00",
+      "scraped_at_utc": "2026-08-30T02:36:32+00:00",
       "raw_text": "Everest Colour Limited IPO Everest Colour Limited IPO for general public. Symbol ECL. Units 655700 price per unit 100. Open 2026-06-05 close 2026-06-10 status Closed"
     },
     {
@@ -271,14 +271,14 @@
       ],
       "issue_open_date": "2026-06-01",
       "issue_close_date": "2026-06-04",
-      "min_quantity": 10.0,
+      "min_quantity": null,
       "max_quantity": null,
       "total_quantity": 4674000.0,
       "price_per_unit": 100.0,
       "announcement_date": "2026-06-04",
       "source": "sharehub_ipo",
       "url": "https://sharehubnepal.com/investment/upcoming-public-offerings/3648-ipo-general-public-sanigad-hydro-limited",
-      "scraped_at_utc": "2026-08-29T20:11:54+00:00",
+      "scraped_at_utc": "2026-08-30T02:36:32+00:00",
       "raw_text": "Sanigad Hydro Limited IPO Sanigad Hydro Limited IPO for general public. Symbol SGHL. Units 4674000 price per unit 100. Open 2026-06-01 close 2026-06-04 status Closed"
     }
   ],
