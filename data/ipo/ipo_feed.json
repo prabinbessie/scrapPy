@@ -1,16 +1,14 @@
 {
   "meta": {
-    "generated_at_utc": "2026-09-21T21:26:56+00:00",
+    "generated_at_utc": "2026-09-22T02:32:19+00:00",
     "sources": {
       "sharehub_ipo": 5,
       "merolagani_upcoming": 0,
       "nepselink_ipo_opening": 10,
-      "merolagani_results": 0,
+      "merolagani_results": 1,
       "nepse_disclosures": 0
     },
-    "stale_sources": [
-      "merolagani_announcements"
-    ],
+    "stale_sources": [],
     "upcoming_count": 0,
     "open_count": 0,
     "closed_count": 10,
@@ -39,7 +37,7 @@
       "announcement_date": "2083-05-26",
       "source": "nepselink_ipo_opening",
       "url": "https://nepselink.com/ipo-opening",
-      "scraped_at_utc": "2026-09-21T21:26:56+00:00",
+      "scraped_at_utc": "2026-09-22T02:32:19+00:00",
       "raw_text": "Beni Hydropower Project Limited IPO-General IPO-General Beni Hydropower Project Limited units 863200 price per unit 100 minimum apply 10 open 2083-05-22 close 2083-05-26 status Closed"
     },
     {
@@ -61,7 +59,7 @@
       "announcement_date": "2083-03-08",
       "source": "nepselink_ipo_opening",
       "url": "https://nepselink.com/ipo-opening",
-      "scraped_at_utc": "2026-09-21T21:26:56+00:00",
+      "scraped_at_utc": "2026-09-22T02:32:19+00:00",
       "raw_text": "Mount Everest Power Development Limited IPO-General IPO-General Mount Everest Power Development Limited units 1427600 price per unit 100 minimum apply 10 open 2083-03-03 close 2083-03-08 status Closed"
     },
     {
@@ -83,7 +81,7 @@
       "announcement_date": "2083-03-02",
       "source": "nepselink_ipo_opening",
       "url": "https://nepselink.com/ipo-opening",
-      "scraped_at_utc": "2026-09-21T21:26:56+00:00",
+      "scraped_at_utc": "2026-09-22T02:32:19+00:00",
       "raw_text": "Sarvottam Paints Industries Limited IPO-General IPO-General Sarvottam Paints Industries Limited units 705500 price per unit 100 minimum apply 10 open 2083-02-28 close 2083-03-02 status Closed"
     },
     {
@@ -105,7 +103,7 @@
       "announcement_date": "2083-02-27",
       "source": "nepselink_ipo_opening",
       "url": "https://nepselink.com/ipo-opening",
-      "scraped_at_utc": "2026-09-21T21:26:56+00:00",
+      "scraped_at_utc": "2026-09-22T02:32:19+00:00",
       "raw_text": "Everest Colour Limited IPO-General IPO-General Everest Colour Limited units 655700 price per unit 100 minimum apply 10 open 2083-02-22 close 2083-02-27 status Closed"
     },
     {
@@ -127,7 +125,7 @@
       "announcement_date": "2083-02-21",
       "source": "nepselink_ipo_opening",
       "url": "https://nepselink.com/ipo-opening",
-      "scraped_at_utc": "2026-09-21T21:26:56+00:00",
+      "scraped_at_utc": "2026-09-22T02:32:19+00:00",
       "raw_text": "Sanigad Hydro Limited IPO-General IPO-General Sanigad Hydro Limited units 4674000 price per unit 100 minimum apply 10 open 2083-02-18 close 2083-02-21 status Closed"
     },
     {
@@ -149,7 +147,7 @@
       "announcement_date": "2083-02-13",
       "source": "nepselink_ipo_opening",
       "url": "https://nepselink.com/ipo-opening",
-      "scraped_at_utc": "2026-09-21T21:26:56+00:00",
+      "scraped_at_utc": "2026-09-22T02:32:19+00:00",
       "raw_text": "Kalanga Hydro Limited IPO-General IPO-General Kalanga Hydro Limited units 2870000 price per unit 100 minimum apply 10 open 2083-02-08 close 2083-02-13 status Closed"
     },
     {
@@ -171,7 +169,7 @@
       "announcement_date": "2083-01-28",
       "source": "nepselink_ipo_opening",
       "url": "https://nepselink.com/ipo-opening",
-      "scraped_at_utc": "2026-09-21T21:26:56+00:00",
+      "scraped_at_utc": "2026-09-22T02:32:19+00:00",
       "raw_text": "Taksar Pikhuwa Khola Hydropower Limited IPO-General IPO-General Taksar Pikhuwa Khola Hydropower Limited units 2515455 price per unit 100 minimum apply 10 open 2083-01-23 close 2083-01-28 status Closed"
     },
     {
@@ -193,7 +191,7 @@
       "announcement_date": "2083-01-22",
       "source": "nepselink_ipo_opening",
       "url": "https://nepselink.com/ipo-opening",
-      "scraped_at_utc": "2026-09-21T21:26:56+00:00",
+      "scraped_at_utc": "2026-09-22T02:32:19+00:00",
       "raw_text": "Yambaling Hydropower Limited IPO-General IPO-General Yambaling Hydropower Limited units 1743000 price per unit 100 minimum apply 10 open 2083-01-16 close 2083-01-22 status Closed"
     },
     {
@@ -215,7 +213,7 @@
       "announcement_date": "2083-01-08",
       "source": "nepselink_ipo_opening",
       "url": "https://nepselink.com/ipo-opening",
-      "scraped_at_utc": "2026-09-21T21:26:56+00:00",
+      "scraped_at_utc": "2026-09-22T02:32:19+00:00",
       "raw_text": "Sopan Pharmaceuticals Limited IPO-General IPO-General Sopan Pharmaceuticals Limited units 3474900 price per unit 100 minimum apply 10 open 2083-01-03 close 2083-01-08 status Closed"
     },
     {
@@ -237,7 +235,7 @@
       "announcement_date": "2083-01-02",
       "source": "nepselink_ipo_opening",
       "url": "https://nepselink.com/ipo-opening",
-      "scraped_at_utc": "2026-09-21T21:26:56+00:00",
+      "scraped_at_utc": "2026-09-22T02:32:19+00:00",
       "raw_text": "Snow Rivers Limited IPO-General IPO-General Snow Rivers Limited units 778125 price per unit 100 minimum apply 10 open 2083-01-29 close 2083-01-02 status Closed"
     }
   ],
@@ -246,11 +244,11 @@
       "record_type": "result",
       "nature": "result",
       "issue_status": "result",
-      "issue_type": "debenture",
+      "issue_type": "ipo",
       "symbol": "",
-      "company_name": "Laxmi Sunrise Bank Limited",
-      "title": "Laxmi Sunrise Bank Limited has distributed its 30,00,000.00 units@Rs.1000/unit (7% Laxmi Sunrise Debenture 2092) to the general public on Bhadra 01, 2083 and has requested all the member of C-ASBA bank/financial Institutions to release the payment to the non-allottee's bank account.",
-      "details": "Laxmi Sunrise Bank Limited has distributed its 30,00,000.00 units@Rs.1000/unit (7% Laxmi Sunrise Debenture 2092) to the general public on Bhadra 01, 2083 and has requested all the member of C-ASBA bank/financial Institutions to release the payment to the non-allottee's bank account.",
+      "company_name": "Beni Hydropower Project Limited",
+      "title": "Beni Hydropower Project Limited has distributed its 8,63,200.00 units of IPO shares to the general public on Ashwin 05, 2083",
+      "details": "Beni Hydropower Project Limited has distributed its 8,63,200.00 units of IPO shares to the general public on Ashwin 05, 2083",
       "reserved_for": [
         "general_public"
       ],
@@ -258,14 +256,13 @@
       "issue_close_date": null,
       "min_quantity": null,
       "max_quantity": null,
-      "total_quantity": 3000000.0,
-      "price_per_unit": 1000.0,
-      "announcement_date": "Aug 18, 2026",
+      "total_quantity": 863200.0,
+      "price_per_unit": null,
+      "announcement_date": "Sep 22, 2026",
       "source": "merolagani_announcements",
-      "url": "https://merolagani.com/AnnouncementDetail.aspx?id=67077",
-      "scraped_at_utc": "2026-08-24T18:26:33+00:00",
-      "raw_text": "Laxmi Sunrise Bank Limited has distributed its 30,00,000.00 units@Rs.1000/unit (7% Laxmi Sunrise Debenture 2092) to the general public on Bhadra 01, 2083 and has requested all the member of C-ASBA bank/financial Institutions to release the payment to the non-allottee's bank account. Laxmi Sunrise Bank Limited has distributed its 30,00,000.00 units@Rs.1000/unit (7% Laxmi Sunrise Debenture 2092) to the general public on Bhadra 01, 2083 and has requested all the member of C-ASBA bank/financial Institutions to release the payment to the non-allottee's bank account.",
-      "stale": true
+      "url": "https://merolagani.com/AnnouncementDetail.aspx?id=67534",
+      "scraped_at_utc": "2026-09-22T02:32:19+00:00",
+      "raw_text": "Beni Hydropower Project Limited has distributed its 8,63,200.00 units of IPO shares to the general public on Ashwin 05, 2083 Beni Hydropower Project Limited has distributed its 8,63,200.00 units of IPO shares to the general public on Ashwin 05, 2083"
     }
   ],
   "unknown": []
