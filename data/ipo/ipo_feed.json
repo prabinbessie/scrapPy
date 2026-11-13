@@ -1,8 +1,8 @@
 {
   "meta": {
-    "generated_at_utc": "2026-11-13T04:14:08+00:00",
+    "generated_at_utc": "2026-11-13T13:40:11+00:00",
     "sources": {
-      "sharehub_ipo": 2,
+      "sharehub_ipo": 3,
       "merolagani_upcoming": 0,
       "nepselink_ipo_opening": 10,
       "merolagani_results": 0,
@@ -11,13 +11,37 @@
     "stale_sources": [
       "merolagani_announcements"
     ],
-    "upcoming_count": 2,
+    "upcoming_count": 3,
     "open_count": 0,
     "closed_count": 10,
     "result_count": 1,
     "unknown_count": 0
   },
   "upcoming": [
+    {
+      "record_type": "issue",
+      "nature": "issue",
+      "issue_status": "upcoming",
+      "issue_type": "ipo",
+      "symbol": "AELTD",
+      "company_name": "Aashutosh Energy Limited",
+      "title": "Aashutosh Energy Limited IPO",
+      "details": "Aashutosh Energy Limited IPO for general public. Symbol AELTD. Units 1200000 price per unit 100. Open - close - status ComingSoon",
+      "reserved_for": [
+        "general_public"
+      ],
+      "issue_open_date": null,
+      "issue_close_date": null,
+      "min_quantity": null,
+      "max_quantity": null,
+      "total_quantity": 1200000.0,
+      "price_per_unit": 100.0,
+      "announcement_date": null,
+      "source": "sharehub_ipo",
+      "url": "https://sharehubnepal.com/investment/upcoming-public-offerings/3846-ipo-general-public-aashutosh-energy-limited",
+      "scraped_at_utc": "2026-11-13T13:40:11+00:00",
+      "raw_text": "Aashutosh Energy Limited IPO Aashutosh Energy Limited IPO for general public. Symbol AELTD. Units 1200000 price per unit 100. Open - close - status ComingSoon"
+    },
     {
       "record_type": "issue",
       "nature": "issue",
@@ -39,7 +63,7 @@
       "announcement_date": null,
       "source": "sharehub_ipo",
       "url": "https://sharehubnepal.com/investment/upcoming-public-offerings/3845-ipo-general-public-kantipur-pharmaceuticals-lab-limited",
-      "scraped_at_utc": "2026-11-13T04:14:08+00:00",
+      "scraped_at_utc": "2026-11-13T13:40:11+00:00",
       "raw_text": "Kantipur Pharmaceuticals Lab Limited IPO Kantipur Pharmaceuticals Lab Limited IPO for general public. Symbol KPLL. Units 1700000 price per unit 100. Open - close - status ComingSoon"
     },
     {
@@ -63,7 +87,7 @@
       "announcement_date": null,
       "source": "sharehub_ipo",
       "url": "https://sharehubnepal.com/investment/upcoming-public-offerings/3840-ipo-general-public-him-parbat-hydropower-limited",
-      "scraped_at_utc": "2026-11-13T04:14:08+00:00",
+      "scraped_at_utc": "2026-11-13T13:40:11+00:00",
       "raw_text": "Him Parbat Hydropower Limited IPO Him Parbat Hydropower Limited IPO for general public. Symbol HPHL. Units 5915000 price per unit 100. Open - close - status ComingSoon"
     }
   ],
@@ -88,7 +112,7 @@
       "announcement_date": "2083-05-26",
       "source": "nepselink_ipo_opening",
       "url": "https://nepselink.com/ipo-opening",
-      "scraped_at_utc": "2026-11-13T04:14:08+00:00",
+      "scraped_at_utc": "2026-11-13T13:40:11+00:00",
       "raw_text": "Beni Hydropower Project Limited IPO-General IPO-General Beni Hydropower Project Limited units 863200 price per unit 100 minimum apply 10 open 2083-05-22 close 2083-05-26 status Closed"
     },
     {
@@ -110,7 +134,7 @@
       "announcement_date": "2083-03-08",
       "source": "nepselink_ipo_opening",
       "url": "https://nepselink.com/ipo-opening",
-      "scraped_at_utc": "2026-11-13T04:14:08+00:00",
+      "scraped_at_utc": "2026-11-13T13:40:11+00:00",
       "raw_text": "Mount Everest Power Development Limited IPO-General IPO-General Mount Everest Power Development Limited units 1427600 price per unit 100 minimum apply 10 open 2083-03-03 close 2083-03-08 status Closed"
     },
     {
@@ -132,7 +156,7 @@
       "announcement_date": "2083-03-02",
       "source": "nepselink_ipo_opening",
       "url": "https://nepselink.com/ipo-opening",
-      "scraped_at_utc": "2026-11-13T04:14:08+00:00",
+      "scraped_at_utc": "2026-11-13T13:40:11+00:00",
       "raw_text": "Sarvottam Paints Industries Limited IPO-General IPO-General Sarvottam Paints Industries Limited units 705500 price per unit 100 minimum apply 10 open 2083-02-28 close 2083-03-02 status Closed"
     },
     {
@@ -154,7 +178,7 @@
       "announcement_date": "2083-02-27",
       "source": "nepselink_ipo_opening",
       "url": "https://nepselink.com/ipo-opening",
-      "scraped_at_utc": "2026-11-13T04:14:08+00:00",
+      "scraped_at_utc": "2026-11-13T13:40:11+00:00",
       "raw_text": "Everest Colour Limited IPO-General IPO-General Everest Colour Limited units 655700 price per unit 100 minimum apply 10 open 2083-02-22 close 2083-02-27 status Closed"
     },
     {
@@ -176,7 +200,7 @@
       "announcement_date": "2083-02-21",
       "source": "nepselink_ipo_opening",
       "url": "https://nepselink.com/ipo-opening",
-      "scraped_at_utc": "2026-11-13T04:14:08+00:00",
+      "scraped_at_utc": "2026-11-13T13:40:11+00:00",
       "raw_text": "Sanigad Hydro Limited IPO-General IPO-General Sanigad Hydro Limited units 4674000 price per unit 100 minimum apply 10 open 2083-02-18 close 2083-02-21 status Closed"
     },
     {
@@ -198,7 +222,7 @@
       "announcement_date": "2083-02-13",
       "source": "nepselink_ipo_opening",
       "url": "https://nepselink.com/ipo-opening",
-      "scraped_at_utc": "2026-11-13T04:14:08+00:00",
+      "scraped_at_utc": "2026-11-13T13:40:11+00:00",
       "raw_text": "Kalanga Hydro Limited IPO-General IPO-General Kalanga Hydro Limited units 2870000 price per unit 100 minimum apply 10 open 2083-02-08 close 2083-02-13 status Closed"
     },
     {
@@ -220,7 +244,7 @@
       "announcement_date": "2083-01-28",
       "source": "nepselink_ipo_opening",
       "url": "https://nepselink.com/ipo-opening",
-      "scraped_at_utc": "2026-11-13T04:14:08+00:00",
+      "scraped_at_utc": "2026-11-13T13:40:11+00:00",
       "raw_text": "Taksar Pikhuwa Khola Hydropower Limited IPO-General IPO-General Taksar Pikhuwa Khola Hydropower Limited units 2515455 price per unit 100 minimum apply 10 open 2083-01-23 close 2083-01-28 status Closed"
     },
     {
@@ -242,7 +266,7 @@
       "announcement_date": "2083-01-22",
       "source": "nepselink_ipo_opening",
       "url": "https://nepselink.com/ipo-opening",
-      "scraped_at_utc": "2026-11-13T04:14:08+00:00",
+      "scraped_at_utc": "2026-11-13T13:40:11+00:00",
       "raw_text": "Yambaling Hydropower Limited IPO-General IPO-General Yambaling Hydropower Limited units 1743000 price per unit 100 minimum apply 10 open 2083-01-16 close 2083-01-22 status Closed"
     },
     {
@@ -264,7 +288,7 @@
       "announcement_date": "2083-01-08",
       "source": "nepselink_ipo_opening",
       "url": "https://nepselink.com/ipo-opening",
-      "scraped_at_utc": "2026-11-13T04:14:08+00:00",
+      "scraped_at_utc": "2026-11-13T13:40:11+00:00",
       "raw_text": "Sopan Pharmaceuticals Limited IPO-General IPO-General Sopan Pharmaceuticals Limited units 3474900 price per unit 100 minimum apply 10 open 2083-01-03 close 2083-01-08 status Closed"
     },
     {
@@ -286,7 +310,7 @@
       "announcement_date": "2083-01-02",
       "source": "nepselink_ipo_opening",
       "url": "https://nepselink.com/ipo-opening",
-      "scraped_at_utc": "2026-11-13T04:14:08+00:00",
+      "scraped_at_utc": "2026-11-13T13:40:11+00:00",
       "raw_text": "Snow Rivers Limited IPO-General IPO-General Snow Rivers Limited units 778125 price per unit 100 minimum apply 10 open 2083-01-29 close 2083-01-02 status Closed"
     }
   ],
